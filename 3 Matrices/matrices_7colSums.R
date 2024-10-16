@@ -3,6 +3,8 @@
 
 # Matrices are rectangular arrays of numbers or symbols arranged in rows and columns. They are a powerful tool used in various fields of mathematics, including linear algebra, statistics, and computer science.
 
+## Matrices ----
+
 # For restarting environment
 rm(list = ls())
 
@@ -13,8 +15,8 @@ titles <- c("Tanjiro Kamado, Unwavering Resolve Arc (2019)",
             "Mugen Train Arc and Entertainment District Arc (2021-2022)",
             "Swordsmith Village Arc (2023)")
 demons_slayer_matrix <- matrix(demons_slayer,
-                              nrow = 3, byrow = TRUE,
-                              dimnames = list(titles, categories))
+                               nrow = 3, byrow = TRUE,
+                               dimnames = list(titles, categories))
 
 demons_slayer <- c(21.75, 15.25, 35.10, 15.75, 22.20, 11.20)
 categories <- c("Manga", "Anime")
@@ -22,8 +24,8 @@ titles <- c("Hashira Training Arc (2024)",
             "Final Arc (2025)",
             "Next Generation of Hashiras (2025)")
 demons_slayer_matrix2 <- matrix(demons_slayer,
-                              nrow = 3, byrow = TRUE,
-                              dimnames = list(titles, categories))
+                                nrow = 3, byrow = TRUE,
+                                dimnames = list(titles, categories))
 
 # Matrices
 demons_slayer_matrix
@@ -32,11 +34,6 @@ demons_slayer_matrix2
 # Combine both Matrices in one matrix
 all_arcs <- rbind(demons_slayer_matrix, demons_slayer_matrix2)
 
-# Print out the all arcs in one matrix
-print(all_arcs)
-
-# Display in tabular form
-View(all_arcs)
 
 
 
@@ -46,3 +43,19 @@ View(all_arcs)
 
 
 
+
+### Selection ----
+# Select the Anime revenue for all movies
+anime_revenue <- all_arcs[ ,2]
+
+# Average Anime Revenue
+avg_anime_revenue <- mean(anime_revenue)
+
+# Select the Anime revenue for first 2 movies
+anime_some <- all_arcs[1:2, 2]
+
+# Average Anime revenue for first two movies
+avg_first_two_anime <- mean(anime_some)
+
+# Print avg_first_two_anime
+print(avg_first_two_anime)
