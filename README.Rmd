@@ -1,1 +1,14 @@
 git init . folder
+# Comment
+# Arithmetic
+# Variables
+# Data Types
+# Data Types class() function
+# Vector
+# names() function
+# calculation
+# Comparison
+# Selection
+# Selection by Range
+# Selection by Range with Calculation
+# Selection Vector by Comparison
