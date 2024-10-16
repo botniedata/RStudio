@@ -9,16 +9,16 @@
 rm(list = ls())
 
 # Box Office Demon Slayer Sales (in Million)
-unwavering_resolve_arc <- c(20.50, 15.25)
-mugen_train_arc <- c(25.35, 20.10)
-swordsmith_village_arc <-c(30.70, 25.55)
+new_mission <- c(20.50, 15.25)
+set_your_heart_blaze <- c(25.35, 20.10)
+no_matter_how_many_lives <-c(30.70, 25.55)
 
 # Construct Demons Slayer Matrix
-demons_slayer_matrix <- matrix(c(unwavering_resolve_arc, mugen_train_arc, swordsmith_village_arc), nrow = 3, byrow = TRUE)
+demons_slayer_matrix <- matrix(c(new_mission, set_your_heart_blaze, no_matter_how_many_lives), nrow = 3, byrow = TRUE)
 
 # Vectors for category sales and arc, used for naming
 categories <- c("Manga", "Anime")
-titles <- c("Tanjiro Kamado, Unwavering Resolve Arc (2019)", "Mugen Train Arc and Entertainment District Arc (2021-2022)", "Swordsmith Village Arc (2023)")
+titles <- c("New Mission", "Set Your Heart Blaze", "No Matter How Many Lives")
 
 # Name the columns with Category
 colnames(demons_slayer_matrix) <- categories

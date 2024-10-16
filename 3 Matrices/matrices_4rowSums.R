@@ -11,9 +11,9 @@ rm(list = ls())
 # Construct demons_slayer_matrix
 demons_slayer <- c(20.50, 15.25, 25.35, 20.10, 30.70, 25.55)
 categories <- c("Manga", "Anime")
-titles <- c("Tanjiro Kamado, Unwavering Resolve Arc (2019)",
-            "Mugen Train Arc and Entertainment District Arc (2021-2022)",
-            "Swordsmith Village Arc (2023)")
+titles <- c("New Mission",
+            "Set Your Heart Blaze",
+            "No Matter How Many Lives")
 demon_slayer_matrix <- matrix(demons_slayer,
                               nrow = 3, byrow = TRUE,
                               dimnames = list(titles, categories))

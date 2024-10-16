@@ -7,13 +7,13 @@
 rm(list = ls())
 
 # Box Office Demon Slayer Sales (in Million)
-unwavering_resolve_arc <- c(20.50, 15.25)
-mugen_train_arc <- c(25.35, 20.10)
-swordsmith_village_arc <-c(30.70, 25.55)
+new_mission <- c(20.50, 15.25)
+set_your_heart_blaze <- c(25.35, 20.10)
+no_matter_how_many_lives <-c(30.70, 25.55)
 
 
 # Create a vector for 3 Seasons
-box_office <- c(unwavering_resolve_arc, mugen_train_arc, swordsmith_village_arc)
+box_office <- c(new_mission, set_your_heart_blaze, no_matter_how_many_lives)
 
 # Construct Demons Slayer Matrix - demons_slayer_matrix
 demons_slayer_matrix <- matrix(box_office, byrow = TRUE, nrow = 3)
