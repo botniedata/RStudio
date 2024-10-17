@@ -27,6 +27,8 @@ levels_factor <- c("D", "U", "U", "D", "D")
 factor_levels_vector <- factor(levels_factor)
 levels(factor_levels_vector) <- levels(levels_factor) <- c("Down", "Up")
 
-# Print out levels
-factor_levels_vector
+# Generate summary for survey_vector
+summary(levels_factor)
 
+# Generate summary for factor_levels_vector
+summary(factor_levels_vector)
