@@ -1,12 +1,7 @@
 # Introduction to R ----
-## Creating a Data frame ----
+## Selection of data frame elements----
 
-# Names of Hashiras
-# Hashira's power elements
-# Hashira's ranking
-# Hashira's damage rate
-# If hashira's power element belongs to earth elements
-
+## Data Frame ----
 # For restarting environment
 rm(list = ls())
 
@@ -27,3 +22,8 @@ print(hashira_df)
 # Check the structure of hashira_df
 str(hashira_df)
 
+
+
+
+## Adapt the code to select all columns for hashira has earth elements ----
+hashira_df[earth_element, 1:5]

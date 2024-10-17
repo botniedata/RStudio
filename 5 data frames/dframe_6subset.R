@@ -1,11 +1,9 @@
 # Introduction to R ----
-## Creating a Data frame ----
+## Subset elements with conditional formatting----
 
-# Names of Hashiras
-# Hashira's power elements
-# Hashira's ranking
-# Hashira's damage rate
-# If hashira's power element belongs to earth elements
+## Data Frame ----
+
+# subset() function in R is a convenient way to extract a subset of a data frame based on specific conditions. It allows you to filter rows or columns based on logical expressions.
 
 # For restarting environment
 rm(list = ls())
@@ -27,3 +25,12 @@ print(hashira_df)
 # Check the structure of hashira_df
 str(hashira_df)
 
+
+
+
+
+## Select hashira with power is < 50 ----
+subset(hashira_df, subset = damage < 50)
+
+## Select hashira with power is > 50 ----
+subset(hashira_df, subset = damage > 50)

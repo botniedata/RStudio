@@ -1,12 +1,7 @@
 # Introduction to R ----
-## Creating a Data frame ----
+## Selection of data frame elements----
 
-# Names of Hashiras
-# Hashira's power elements
-# Hashira's ranking
-# Hashira's damage rate
-# If hashira's power element belongs to earth elements
-
+## Data Frame ----
 # For restarting environment
 rm(list = ls())
 
@@ -27,3 +22,12 @@ print(hashira_df)
 # Check the structure of hashira_df
 str(hashira_df)
 
+
+
+## The hashira_df data frame ----
+
+# Print out the element of Giyu (row 5, column 3)
+hashira_df[5, 3]
+
+# Print out data of Gyomei (entire third row)
+hashira_df[3, ]
