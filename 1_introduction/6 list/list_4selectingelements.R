@@ -1,6 +1,11 @@
 # Introduction to R ----
 ## Selecting elements from a list ----
 
+# [[]] operator is used to extract elementss from a list.
+# [[n]] part extracts the second vector from the list
+# [n] part extracts the second element from the vector
+# [[2]][2] second vector in the list, second element from the vector
+
 # For restarting environment
 rm(list = ls())
 
