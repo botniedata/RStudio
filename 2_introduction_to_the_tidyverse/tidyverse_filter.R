@@ -22,7 +22,18 @@ rm(list = ls())
 # Display gapminder dataset - data frame called tibble ----
 gapminder
 
+### Code ----
+
 # Filter for one year (2007)
 gapminder %>%
   filter(year == 2007)
+
+# Filter for one country ("United States")
+gapminder %>%
+  filter(country == "United States")
+
+# Filter for two variables
+gapminder %>%
+  filter(year == 2007,
+         country == "United States")
 
