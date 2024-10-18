@@ -17,6 +17,7 @@ gapminder_1952<- gapminder %>%
   filter(year == 1952)
 
 ### Code ----
+
 # Displaying the relationship between population and GDP per Capita for the year 1952.
 ggplot(gapminder_1952, aes(x = pop, y = gdpPercap)) +
   geom_point()
@@ -24,3 +25,6 @@ ggplot(gapminder_1952, aes(x = pop, y = gdpPercap)) +
 # Displaying the relationship between population and Life Expentency for the year 1992
 ggplot(gapminder_1952, aes(x= pop, y = lifeExp)) +
   geom_point()
+
+
+
