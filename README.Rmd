@@ -6,3 +6,8 @@ git init . folder
 • Factors
 • Data frames
 • Lists
+
+2. Introduction to the Tidyverse
+• Transforming and Visualizing data with R
+
+3. Data Manipulation with dplyr
