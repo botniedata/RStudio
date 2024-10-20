@@ -16,9 +16,19 @@ by_year <- gapminder %>%
   group_by(year) %>%
   summarize(mediaGDPPerCap = median(gdpPercap))
 
-### Graph
-# Createa line plot showing GDP per Capita changing overtime
+# Graph
+# Create a line plot showing GDP per Capita changing overtime
 ggplot(by_year, aes(x = year, y = mediaGDPPerCap)) + 
+  geom_line() +
+  expand_limits(y = 0)
+
+# Summarize the median GDP per Capita by year and continent
+by_year_continent <- gapminder %>%
+  group_by(continent, year) %>%
+  summarize(medianGDPPerCap = median(gdpPercap))
+
+# Graph
+ggplot(by_year_continent, aes(x = year, y = medianGDPPerCap, color = continent)) +
   geom_line() +
   expand_limits(y = 0)
 
