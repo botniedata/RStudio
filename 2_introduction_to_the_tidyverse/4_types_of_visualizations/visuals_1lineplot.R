@@ -1,6 +1,6 @@
 # Introduction to the Tidyverse ----
 ## Types of Visualizations ----
-# The lineplot() function is not a built-in function in base R. However, it is a common visualization technique that can be created using various R packages.
+# The geom_line() function in R is used to create line charts, which are a type of graphical representation that display data as connected points. Line charts are often used to visualize trends or patterns over time or other continuous variables.
 
 # Loading packages (gapminder dataset, dplyr manipulate, ggplot visualization)
 library(gapminder)
