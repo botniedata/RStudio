@@ -18,11 +18,23 @@ rm(list = ls())
 # Load gapminder dataset
 gapminder
 
-# glimpse() verb
-# The glimpse() function in R is used to get a quick summary of a data frame. It provides a compact view of the data, including the column names, data types, and a few sample values from each column.
-glimpse(gapminder)
-
+### Code ----
 # Select columns using select() verb
 gapminder_selected <- gapminder %>%
   select(country, continent, year, pop)
+
+# Rate of population
+gapminder_selected %>%
+  mutate(pop_rate = (100 / pop)) %>%
+  arrange(desc(year))
+
+# population in 2017 in millions
+# using mutate() and .keep = "none" for new table
+gapminder %>%
+  filter(year == 2007) %>%
+  mutate(country, continent, year,
+         pop_mil = pop / 1000000, .keep = "none") %>%
+  arrange(desc(pop_mil))
+
+
 
