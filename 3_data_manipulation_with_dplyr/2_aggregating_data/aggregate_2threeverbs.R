@@ -30,4 +30,11 @@ gapminder_selected %>%
   summarize(total_population = sum(pop)) %>%
   arrange(desc(total_population))
 
+#
+gapminder_selected %>%
+  filter(year == 2007, continent == "Asia") %>%
+  group_by(country) %>%
+  summarize(total_pop = sum(pop)) %>%
+  summarize(average_pop = mean(pop), median_pop = median(pop))
+
 
