@@ -1,8 +1,8 @@
 # Data Manipulation with dplyr ----
 ## Select and Transforming Data ----
 
-## rename() verb ----
-# The rename() function in R is used to rename columns in a data frame. It takes the data frame as the first argument and then a series of key-value pairs to specify the new column names.
+## relocate() verb ----
+# The relocate() function in R is used to reorder columns in a data frame. It takes the data frame as the first argument and then a series of column names to specify the new order.
 
 ## Load libraries ----
 install.packages("dplyr")
