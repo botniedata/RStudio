@@ -19,21 +19,19 @@
 # • Using functions:
 # new_df <- select(df, contains("data"), num_range(1:5))  # Selects columns containing "data" and columns 1 to 5
 
-## Load libraries (tidyverse, ggplot2, gapminder) ----
+## Load libraries ----
 install.packages("dplyr")
-
 library(tidyverse)
-library(ggplot2)
-library(gapminder)
-
-# Load dataset counties
-counties <- read.csv("F:\\R\\dataset\\counties.csv")
-
+library(readr)
 
 ## Restarting Environment ----
 rm(list = ls())
 
-### Code ----
+# Read the CSV file into a tibble
+counties <- read_csv("F:\\R\\dataset\\counties.csv")
+
+### Code (1) ----
+
 # Glimpse the counties table
 glimpse(counties)
 
@@ -41,4 +39,16 @@ glimpse(counties)
 counties %>%
   select(state, county, population, professional:production) %>%
 # Arrange service in descending order
+  arrange(desc(service))
+
+### Code (2) Select Helpers ----
+# Check the documentation of '?select_helpers'
+# Select the state, county, population, and those ending with "work"
+counties %>%
+select(state, county, population, ends_with("work")) %>%
+
+# Filter for counties that have at least 50% of people engaged in public work
+filter(public_work > 50)
+
+
 
