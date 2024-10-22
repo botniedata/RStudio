@@ -1,7 +1,7 @@
 # Data Manipulation with dplyr ----
 ## Select and Transforming Data ----
 
-## 4 Verbs ----
+## Frequency of Three baby names over time ----
 # The relocate() function in R is used to reorder columns in a data frame. It takes the data frame as the first argument and then a series of column names to specify the new order.
 
 ## Load libraries ----
@@ -30,6 +30,8 @@ babynames %>%
   slice_max(number, n = 1)
 
 ### Code ---
+# Select three baby names using '%in% c()'
+
 selected_names <- babynames %>%
   # Filter for the names, Steven, Thomas, and Matthew
   filter(name %in% c("Steven", "Thomas", "Matthew"))
