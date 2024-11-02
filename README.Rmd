@@ -9,5 +9,17 @@ git init . folder
 
 2. Introduction to the Tidyverse
 • Transforming and Visualizing data with R
+• Creating visuals using Log Scales
+• Creating visual using Aestheric arguements
+• Faceting visual with more visual and insights
 
 3. Data Manipulation with dplyr
+• Summarizing data using dplyr package
+• Visualizing data using gi
+• Grouping and summarizing data
+
+4. Types of Visualization
+• Line Plot - display the data on its thrend
+• Bar Plot - display data by its category
+• Histogram - display the distribution of numerical value
+• Box Plot- display a summary consist of median, quartiles and potential outliers
