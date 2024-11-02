@@ -15,9 +15,11 @@ library(readr)
 # Restart Environment ----
 rm(list = ls())
 
-# Load CSV --
+# Load CSV ----
 themes <- read_csv("F:\\R\\dataset\\themes.csv")
 
 # Code ----
-
-
+# Join themes to itself again to find the grandchild relationships
+themes %>% 
+  inner_join(themes, by = c("id" = "parent_id"), suffix = c("_parent", "_child")) %>%
+  inner_join(themes, by = c("id_child" = "parent_id"), suffix = c("_parent", "_grandchild"))
