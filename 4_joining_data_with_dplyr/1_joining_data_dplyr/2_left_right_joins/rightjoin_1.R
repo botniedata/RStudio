@@ -28,7 +28,10 @@ part_categories <- read_csv("F:\\R\\dataset\\part_categories.csv")
   right_join(part_categories, by = c("part_cat_id" = "id")) %>%
   
   # Filter for NA
-  filter(is.na(n))
+  #filter(is.na(n)) %>% # uncomment this to display NA values
 
+  # Use replace_na  to replace  missing values in the column
+  replace_na(list(n = 0))
+  
   print(x)
 
