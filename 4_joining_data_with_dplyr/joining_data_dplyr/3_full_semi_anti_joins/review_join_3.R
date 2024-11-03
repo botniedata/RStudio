@@ -23,13 +23,10 @@ themes <- read_csv("F:\\R\\dataset\\themes.csv")
 ## Filtering Data frame ----
 # Create a Data frame as inventory_parts_joined as inner_join of inventories and inventory_parts
 inventory_parts_joined <- inventories %>%
-  
   # Inner join inventories and inventory_parts using id and inventory_id
   inner_join(inventory_parts, by = c("id" = "inventory_id")) %>%
-  
   # Arrange the quantity in descending order
   arrange(desc(quantity)) %>%
-  
   # Remove in selection the id and version column
   select(-id, -version)
 
@@ -41,18 +38,14 @@ inventory_sets_themes <- inventory_parts_joined %>%
 # Save as batman by filtering name_theme = "Batman"
 batman <- inventory_sets_themes %>%
   filter(name_theme == "Batman")
-
 # Save as starwars by filtering name_theme = "Star Wars"
 star_wars <- inventory_sets_themes %>%
   filter(name_theme == "Star Wars")
-
 # Count the part number and color id, weight by quantity
 batman_parts <- batman %>%
   count(part_num, color_id, wt = quantity)
-
 star_wars_parts <- star_wars %>%
   count(part_num, color_id, wt = quantity)
-
 parts_joined <- batman_parts %>%
   # Combine the star_wars_parts table
   full_join(star_wars_parts, by = c("part_num", "color_id"), suffix = c("_batman", "_star_wars")) %>%
