@@ -14,18 +14,16 @@ answers <- read_csv("F:\\R\\dataset\\stack over flow\\answers.csv")
 question_tags <- read_csv("F:\\R\\dataset\\stack over flow\\question_tags.csv")
 tags <- read_csv("F:\\R\\dataset\\stack over flow\\tags.csv")
 
-answer_counts <- answers %>%
-  count(question_id, sort = TRUE)
-
-question_answer_counts <- questions %>%
-  left_join(answer_counts, by = c("id" = "question_id")) %>%
-  replace_na(list(n = 0))
-
 # Code ----
-tagged_answers <- question_answer_counts %>%
-  # Join the question_tags tables
+# Inner join the question_tags and tags tables with the questions table
+questions %>%
   inner_join(question_tags, by = c("id" = "question_id")) %>%
-  # Join the tags table
   inner_join(tags, by = c("tag_id" = "id"))
 
+# Inner join the question_tags and tags tables with the answers table
+answers %>%
+  inner_join(question_tags, by = c("question_id" = "question_id")) %>%
+  inner_join(tags, by = c("tag_id" = "id"))
 
+# Note:
+# colnames() to identify the column names instantly

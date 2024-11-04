@@ -21,11 +21,20 @@ question_answer_counts <- questions %>%
   left_join(answer_counts, by = c("id" = "question_id")) %>%
   replace_na(list(n = 0))
 
-# Code ----
 tagged_answers <- question_answer_counts %>%
   # Join the question_tags tables
   inner_join(question_tags, by = c("id" = "question_id")) %>%
   # Join the tags table
   inner_join(tags, by = c("tag_id" = "id"))
+
+# Code ----
+tagged_answers %>%
+  # Aggregate by tag_name
+  group_by(tag_name) %>%
+  # Summarize questions and average_answers
+  summarize(questions = n(), # n() verb counts the rows of the data set
+            average_answer = mean(n)) %>%
+  # Sort the questions in descending order
+  arrange(desc(questions))
 
 
