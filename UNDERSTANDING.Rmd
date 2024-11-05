@@ -1,1 +1,64 @@
-**What is Statistics?**
+# **Statistic**
+
+# **What is Statistics?**
+
+-   The practice and study of collecting and analyzing data
+-   A fact about or summary of some data
+
+# **Types of statistics**
+
++----------------------------------+------------------------------------------------------------------+
+| Descriptive statistics           | Inferential statistics                                           |
++==================================+==================================================================+
+| Describe and summarize data      | Use a sample of data to make inferences about a large population |
++----------------------------------+------------------------------------------------------------------+
+| Examples:                        | Example:                                                         |
+|                                  |                                                                  |
+| -   50% of friends drive to work | -   What percent of people drive to work?                        |
+| -   25% take the bus             |                                                                  |
+| -   25% bike                     |                                                                  |
++----------------------------------+------------------------------------------------------------------+
+
+# **Types of data**
+
++-------------------------------------+------------------------------------------------------------------------------+
+| Numeric (Quantitative)              | Categorical (Qualitative)                                                    |
++=====================================+==============================================================================+
+| Numeric Values                      | Categorical or qualitative is made up values that belong to distinct groups. |
++-------------------------------------+------------------------------------------------------------------------------+
+| -   ***Continuous (Measured)***     | -   ***Nominal (Unordered)***                                                |
+|                                     |                                                                              |
+|     quantities that can be measured |                                                                              |
++-------------------------------------+------------------------------------------------------------------------------+
+| Example:                            | Example:                                                                     |
+|                                     |                                                                              |
+| -   Airplane speed                  | -   Married/unmarried                                                        |
+| -   Time spent waiting in line      | -   Country of residence                                                     |
++-------------------------------------+------------------------------------------------------------------------------+
+| -   ***Discrete (Counted)***        | -   ***Ordinal (Ordered)***                                                  |
++-------------------------------------+------------------------------------------------------------------------------+
+| Example:                            | Example:                                                                     |
+|                                     |                                                                              |
+| -   Number of pets                  | -   [ ] Strongly disagree                                                    |
+| -   Number of packages shipped      | -   [ ] Somewhat disagree                                                    |
+|                                     | -   [ ] Neither agree nor disagree                                           |
+|                                     | -   [x] Somewhat agree                                                       |
+|                                     | -   [ ] Strongly agree                                                       |
++-------------------------------------+------------------------------------------------------------------------------+
+
+Categorical data can be represented as numbers
+
++-----------------------+--------------+--------------------------------+--------------+
+| *Nominal (Unordered)* |              | *Ordinal (Ordered)*            |              |
++=======================+==============+================================+==============+
+| Married/unmarried     | ```          | -   Strongly disagree          | \            |
+|                       | ( 1 / 0 )    | -   Somewhat disagree          | ( 1 )\       |
+|                       | ```          | -   Neither agree nor disagree | ( 2 )\       |
+|                       |              | -   Somewhat agree             | ( 3 )\       |
+|                       |              | -   Strongly agree             | ( 4 )\       |
+|                       |              |                                | ( 5 )        |
++-----------------------+--------------+--------------------------------+--------------+
+| Country of residence  | ```          |                                |              |
+|                       | ( 1, 2, ...) |                                |              |
+|                       | ```          |                                |              |
++-----------------------+--------------+--------------------------------+--------------+
