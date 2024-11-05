@@ -1,11 +1,11 @@
 # **Statistic**
 
-# **What is Statistics?**
+## **What is Statistics?**
 
 -   The practice and study of collecting and analyzing data
 -   A fact about or summary of some data
 
-# **Types of statistics**
+## **Types of statistics**
 
 +----------------------------------+------------------------------------------------------------------+
 | Descriptive statistics           | Inferential statistics                                           |
@@ -19,7 +19,7 @@
 | -   25% bike                     |                                                                  |
 +----------------------------------+------------------------------------------------------------------+
 
-# **Types of data**
+## **Types of data**
 
 +-------------------------------------+------------------------------------------------------------------------------+
 | Numeric (Quantitative)              | Categorical (Qualitative)                                                    |

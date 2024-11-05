@@ -1,0 +1,1431 @@
+country,food_category,consumption,co2_emission
+Argentina,7,10.51,37.2
+Argentina,8,38.66,41.53
+Argentina,1,55.48,1712
+Argentina,4,1.56,54.63
+Argentina,3,4.36,6.96
+Argentina,2,11.39,10.46
+Argentina,5,195.08,277.87
+Argentina,11,103.11,19.66
+Argentina,9,8.77,11.22
+Argentina,10,0,0
+Argentina,6,0.49,0.87
+Australia,7,24.14,85.44
+Australia,8,46.12,49.54
+Australia,1,33.86,1044.85
+Australia,4,9.87,345.65
+Australia,3,17.69,28.25
+Australia,2,8.51,7.82
+Australia,5,234.49,334.01
+Australia,11,70.46,13.44
+Australia,9,11.03,14.12
+Australia,10,0.19,0.09
+Australia,6,8.73,15.45
+Albania,7,10.88,38.51
+Albania,8,13.23,14.21
+Albania,1,22.5,694.3
+Albania,4,15.32,536.5
+Albania,3,3.85,6.15
+Albania,2,12.45,11.44
+Albania,5,303.72,432.62
+Albania,11,138.64,26.44
+Albania,9,7.78,9.96
+Albania,10,0,0
+Albania,6,4.36,7.72
+Iceland,7,21.69,76.77
+Iceland,8,26.87,28.86
+Iceland,1,13.36,412.26
+Iceland,4,21.12,739.62
+Iceland,3,74.41,118.81
+Iceland,2,8.24,7.57
+Iceland,5,225.82,321.66
+Iceland,11,72.92,13.91
+Iceland,9,3.89,4.98
+Iceland,10,0.11,0.05
+Iceland,6,3.88,6.87
+New Zealand,7,22.29,78.9
+New Zealand,8,34.98,37.58
+New Zealand,1,22.49,693.99
+New Zealand,4,18.91,662.23
+New Zealand,3,20.36,32.51
+New Zealand,2,9.91,9.1
+New Zealand,5,137.25,195.5
+New Zealand,11,76.91,14.67
+New Zealand,9,9.16,11.72
+New Zealand,10,0.44,0.2
+New Zealand,6,8.22,14.55
+USA,7,27.64,97.83
+USA,8,50.01,53.72
+USA,1,36.24,1118.29
+USA,4,0.43,15.06
+USA,3,12.35,19.72
+USA,2,14.58,13.39
+USA,5,254.69,362.78
+USA,11,80.43,15.34
+USA,9,6.88,8.8
+USA,10,0.04,0.02
+USA,6,7.86,13.91
+Uruguay,7,16.84,59.61
+Uruguay,8,27.45,29.49
+Uruguay,1,29.1,897.96
+Uruguay,4,8.23,288.21
+Uruguay,3,6.53,10.43
+Uruguay,2,13.14,12.07
+Uruguay,5,210.54,299.89
+Uruguay,11,109.31,20.85
+Uruguay,9,11.5,14.72
+Uruguay,10,0.01,0
+Uruguay,6,0.95,1.68
+Luxembourg,7,43.58,154.25
+Luxembourg,8,21.37,22.96
+Luxembourg,1,29.88,922.03
+Luxembourg,4,1.67,58.48
+Luxembourg,3,23.09,36.87
+Luxembourg,2,14.64,13.45
+Luxembourg,5,255.3,363.65
+Luxembourg,11,103.2,19.68
+Luxembourg,9,4.2,5.37
+Luxembourg,10,0.04,0.02
+Luxembourg,6,0.93,1.65
+Brazil,7,12.6,44.6
+Brazil,8,45,48.34
+Brazil,1,39.25,1211.17
+Brazil,4,0.62,21.71
+Brazil,3,10.01,15.98
+Brazil,2,8.98,8.25
+Brazil,5,149.28,212.63
+Brazil,11,53,10.11
+Brazil,9,32.13,41.12
+Brazil,10,3.62,1.63
+Brazil,6,0.67,1.19
+Kazakhstan,7,10.36,36.67
+Kazakhstan,8,18.38,19.74
+Kazakhstan,1,23.38,721.46
+Kazakhstan,4,9.56,334.79
+Kazakhstan,3,5.21,8.32
+Kazakhstan,2,8.29,7.62
+Kazakhstan,5,288.12,410.4
+Kazakhstan,11,92.31,17.6
+Kazakhstan,9,7.32,9.37
+Kazakhstan,10,0.03,0.01
+Kazakhstan,6,5.14,9.1
+Sweden,7,37,130.96
+Sweden,8,16.64,17.87
+Sweden,1,24.58,758.49
+Sweden,4,1.41,49.38
+Sweden,3,23.86,38.1
+Sweden,2,13.37,12.28
+Sweden,5,341.23,486.05
+Sweden,11,79.59,15.18
+Sweden,9,5.96,7.63
+Sweden,10,0.13,0.06
+Sweden,6,6.23,11.03
+Bermuda,7,28.24,99.96
+Bermuda,8,32.62,35.04
+Bermuda,1,33.15,1022.94
+Bermuda,4,2.71,94.9
+Bermuda,3,33.22,53.04
+Bermuda,2,14.92,13.71
+Bermuda,5,95.56,136.12
+Bermuda,11,54.88,10.47
+Bermuda,9,5.38,6.88
+Bermuda,10,0.22,0.1
+Bermuda,6,5.72,10.12
+Denmark,7,24.87,88.03
+Denmark,8,26.75,28.73
+Denmark,1,28.46,878.22
+Denmark,4,0.92,32.22
+Denmark,3,16.49,26.33
+Denmark,2,15.35,14.1
+Denmark,5,277.3,394.99
+Denmark,11,98,18.69
+Denmark,9,4.96,6.35
+Denmark,10,0.03,0.01
+Denmark,6,5.94,10.51
+Finland,7,36.14,127.92
+Finland,8,19.87,21.34
+Finland,1,19.22,593.09
+Finland,4,0.53,18.56
+Finland,3,33.8,53.97
+Finland,2,9.55,8.77
+Finland,5,430.76,613.57
+Finland,11,81.99,15.64
+Finland,9,4.42,5.66
+Finland,10,0.08,0.04
+Finland,6,3.43,6.07
+Ireland,7,32.4,114.68
+Ireland,8,26.26,28.21
+Ireland,1,22.35,689.67
+Ireland,4,4.1,143.58
+Ireland,3,17.39,27.77
+Ireland,2,8.96,8.23
+Ireland,5,291.86,415.73
+Ireland,11,107.98,20.59
+Ireland,9,3,3.84
+Ireland,10,0.25,0.11
+Ireland,6,4.1,7.26
+Greece,7,28.31,100.2
+Greece,8,15.74,16.91
+Greece,1,16.1,496.81
+Greece,4,12.47,436.7
+Greece,3,14.42,23.02
+Greece,2,10.13,9.31
+Greece,5,255.26,363.59
+Greece,11,124.04,23.65
+Greece,9,6.64,8.5
+Greece,10,0.02,0.01
+Greece,6,10.5,18.59
+France,7,33.05,116.98
+France,8,22.93,24.63
+France,1,23.81,734.73
+France,4,3.28,114.87
+France,3,22.91,36.58
+France,2,13.13,12.06
+France,5,241.31,343.72
+France,11,108.43,20.68
+France,9,4.88,6.24
+France,10,0.05,0.02
+France,6,5.39,9.54
+Canada,7,22.81,80.74
+Canada,8,36.68,39.4
+Canada,1,30.25,933.45
+Canada,4,0.97,33.97
+Canada,3,14.56,23.25
+Canada,2,12.95,11.9
+Canada,5,187.77,267.46
+Canada,11,84.96,16.2
+Canada,9,12.65,16.19
+Canada,10,0.94,0.42
+Canada,6,8.01,14.18
+Norway,7,23.51,83.21
+Norway,8,21.01,22.57
+Norway,1,19.83,611.91
+Norway,4,5.34,187.01
+Norway,3,38.18,60.96
+Norway,2,11.41,10.48
+Norway,5,261.34,372.25
+Norway,11,97.12,18.52
+Norway,9,4.36,5.58
+Norway,10,0.11,0.05
+Norway,6,5.28,9.35
+Hong Kong SAR. China,7,67.11,237.54
+Hong Kong SAR. China,8,54.86,58.93
+Hong Kong SAR. China,1,25.82,796.75
+Hong Kong SAR. China,4,2.22,77.74
+Hong Kong SAR. China,3,42.44,67.76
+Hong Kong SAR. China,2,14.5,13.32
+Hong Kong SAR. China,5,105.85,150.77
+Hong Kong SAR. China,11,53.14,10.13
+Hong Kong SAR. China,9,43.48,55.64
+Hong Kong SAR. China,10,2.79,1.26
+Hong Kong SAR. China,6,13.81,24.44
+French Polynesia,7,14.75,52.21
+French Polynesia,8,49.55,53.23
+French Polynesia,1,30.9,953.51
+French Polynesia,4,2.83,99.11
+French Polynesia,3,38.95,62.19
+French Polynesia,2,8.75,8.04
+French Polynesia,5,93.56,133.27
+French Polynesia,11,68.67,13.1
+French Polynesia,9,35.59,45.54
+French Polynesia,10,0.77,0.35
+French Polynesia,6,2.34,4.14
+Israel,7,1.99,7.04
+Israel,8,62.5,67.14
+Israel,1,28.78,888.09
+Israel,4,1.87,65.49
+Israel,3,22.18,35.41
+Israel,2,11.35,10.43
+Israel,5,193.6,275.76
+Israel,11,110.86,21.14
+Israel,9,16.81,21.51
+Israel,10,0.1,0.05
+Israel,6,7.71,13.65
+Switzerland,7,31.49,111.46
+Switzerland,8,16.38,17.6
+Switzerland,1,21.26,656.04
+Switzerland,4,1.42,49.73
+Switzerland,3,13.48,21.52
+Switzerland,2,10.53,9.67
+Switzerland,5,318.69,453.94
+Switzerland,11,89.51,17.07
+Switzerland,9,2.43,3.11
+Switzerland,10,0.44,0.2
+Switzerland,6,9.27,16.41
+Netherlands,7,36.36,128.7
+Netherlands,8,23.9,25.67
+Netherlands,1,17.67,545.26
+Netherlands,4,0.94,32.92
+Netherlands,3,18.64,29.76
+Netherlands,2,14.03,12.89
+Netherlands,5,341.47,486.39
+Netherlands,11,70.17,13.38
+Netherlands,9,2.93,3.75
+Netherlands,10,0.12,0.05
+Netherlands,6,7.94,14.05
+Kuwait,7,0,0
+Kuwait,8,53.61,57.59
+Kuwait,1,13.03,402.08
+Kuwait,4,15.61,546.66
+Kuwait,3,11.99,19.14
+Kuwait,2,12.6,11.57
+Kuwait,5,157.66,224.57
+Kuwait,11,96.76,18.45
+Kuwait,9,43.83,56.09
+Kuwait,10,0.06,0.03
+Kuwait,6,5.23,9.26
+United Kingdom,7,25.79,91.28
+United Kingdom,8,31.55,33.89
+United Kingdom,1,18.12,559.15
+United Kingdom,4,4.49,157.24
+United Kingdom,3,15.49,24.73
+United Kingdom,2,11.08,10.18
+United Kingdom,5,232.2,330.75
+United Kingdom,11,98.63,18.81
+United Kingdom,9,6.39,8.18
+United Kingdom,10,0.05,0.02
+United Kingdom,6,4.18,7.4
+Austria,7,52.56,186.04
+Austria,8,18.61,19.99
+Austria,1,17.14,528.9
+Austria,4,1.16,40.62
+Austria,3,12.16,19.42
+Austria,2,14.68,13.49
+Austria,5,258.09,367.62
+Austria,11,81.1,15.47
+Austria,9,3.7,4.73
+Austria,10,2.06,0.93
+Austria,6,7.88,13.95
+Oman,7,0.01,0.04
+Oman,8,31.51,33.85
+Oman,1,15.1,465.95
+Oman,4,12.87,450.71
+Oman,3,21.56,34.42
+Oman,2,7.8,7.17
+Oman,5,152.28,216.91
+Oman,11,64.1,12.22
+Oman,9,56.55,72.37
+Oman,10,0.21,0.09
+Oman,6,1.68,2.97
+Italy,7,40.28,142.57
+Italy,8,18.61,19.99
+Italy,1,18.6,573.96
+Italy,4,0.92,32.22
+Italy,3,15.6,24.91
+Italy,2,13.34,12.25
+Italy,5,246.88,351.66
+Italy,11,146.37,27.91
+Italy,9,5.74,7.35
+Italy,10,0.01,0
+Italy,6,7.63,13.51
+Bahamas,7,32.74,115.88
+Bahamas,8,45.74,49.13
+Bahamas,1,19.92,614.69
+Bahamas,4,5.22,182.8
+Bahamas,3,18.8,30.02
+Bahamas,2,6.2,5.7
+Bahamas,5,104.76,149.22
+Bahamas,11,39.98,7.62
+Bahamas,9,23.97,30.67
+Bahamas,10,0.09,0.04
+Bahamas,6,4.03,7.13
+Portugal,7,37.91,134.18
+Portugal,8,30.14,32.38
+Portugal,1,16.45,507.61
+Portugal,4,2.38,83.35
+Portugal,3,45.39,72.47
+Portugal,2,9.05,8.31
+Portugal,5,205.04,292.06
+Portugal,11,94.3,17.98
+Portugal,9,14.86,19.02
+Portugal,10,0.01,0
+Portugal,6,3.91,6.92
+Malta,7,34.24,121.19
+Malta,8,26.4,28.36
+Malta,1,19.22,593.09
+Malta,4,1.19,41.67
+Malta,3,24.58,39.25
+Malta,2,11.64,10.69
+Malta,5,190.06,270.72
+Malta,11,139.58,26.62
+Malta,9,4.96,6.35
+Malta,10,0.05,0.02
+Malta,6,5.62,9.95
+Armenia,7,9.67,34.23
+Armenia,8,13.35,14.34
+Armenia,1,19.66,606.67
+Armenia,4,3.02,105.76
+Armenia,3,4.36,6.96
+Armenia,2,11.69,10.74
+Armenia,5,209.03,297.74
+Armenia,11,130.6,24.91
+Armenia,9,3.18,4.07
+Armenia,10,0,0
+Armenia,6,2.55,4.51
+Slovenia,7,28.19,99.78
+Slovenia,8,23.46,25.2
+Slovenia,1,18.43,568.71
+Slovenia,4,0.79,27.67
+Slovenia,3,7.76,12.39
+Slovenia,2,9.36,8.6
+Slovenia,5,235.01,334.75
+Slovenia,11,103.43,19.72
+Slovenia,9,3.95,5.05
+Slovenia,10,0.75,0.34
+Slovenia,6,5.28,9.35
+Chile,7,24.68,87.35
+Chile,8,36.52,39.23
+Chile,1,23.86,736.27
+Chile,4,0.42,14.71
+Chile,3,7.65,12.21
+Chile,2,9.97,9.16
+Chile,5,116.11,165.39
+Chile,11,104.74,19.97
+Chile,9,8.85,11.33
+Chile,10,0.04,0.02
+Chile,6,2.22,3.93
+Venezuela,7,7.23,25.59
+Venezuela,8,39.28,42.19
+Venezuela,1,25.89,798.91
+Venezuela,4,0.32,11.21
+Venezuela,3,8.34,13.32
+Venezuela,2,5.63,5.17
+Venezuela,5,117.79,167.78
+Venezuela,11,49.17,9.38
+Venezuela,9,23.39,29.93
+Venezuela,10,0,0
+Venezuela,6,0.35,0.62
+Belgium,7,38.65,136.8
+Belgium,8,12.2,13.11
+Belgium,1,15.63,482.31
+Belgium,4,1.32,46.23
+Belgium,3,18.97,30.29
+Belgium,2,12.59,11.57
+Belgium,5,236.19,336.43
+Belgium,11,111.91,21.34
+Belgium,9,8.61,11.02
+Belgium,10,0.07,0.03
+Belgium,6,7.32,12.96
+Germany,7,51.81,183.38
+Germany,8,17.75,19.07
+Germany,1,13.16,406.09
+Germany,4,0.73,25.56
+Germany,3,11.16,17.82
+Germany,2,12.2,11.21
+Germany,5,258.7,368.49
+Germany,11,83.41,15.91
+Germany,9,3.34,4.27
+Germany,10,0.88,0.4
+Germany,6,7.96,14.09
+Russia,7,25.66,90.82
+Russia,8,27.5,29.54
+Russia,1,16.98,523.97
+Russia,4,1.4,49.03
+Russia,3,20.82,33.24
+Russia,2,15.43,14.17
+Russia,5,163.57,232.99
+Russia,11,130.99,24.98
+Russia,9,4.71,6.03
+Russia,10,0.05,0.02
+Russia,6,1.62,2.87
+Croatia,7,42.79,151.46
+Croatia,8,8.52,9.15
+Croatia,1,12.41,382.95
+Croatia,4,1.71,59.88
+Croatia,3,15.83,25.28
+Croatia,2,8.48,7.79
+Croatia,5,231.02,329.06
+Croatia,11,106.59,20.33
+Croatia,9,2.64,3.38
+Croatia,10,0,0
+Croatia,6,3.88,6.87
+Belarus,7,40.37,142.89
+Belarus,8,31.29,33.61
+Belarus,1,17.11,527.98
+Belarus,4,0.11,3.85
+Belarus,3,15.75,25.15
+Belarus,2,15.86,14.57
+Belarus,5,133.73,190.49
+Belarus,11,60.48,11.53
+Belarus,9,3.17,4.06
+Belarus,10,0.3,0.14
+Belarus,6,3.36,5.95
+Spain,7,48.92,173.15
+Spain,8,28.63,30.75
+Spain,1,12.15,374.92
+Spain,4,2.16,75.64
+Spain,3,28.83,46.03
+Spain,2,13.32,12.24
+Spain,5,164.29,234.01
+Spain,11,93.88,17.9
+Spain,9,8.32,10.65
+Spain,10,0.02,0.01
+Spain,6,7.44,13.17
+Paraguay,7,26.24,92.88
+Paraguay,8,6.39,6.86
+Paraguay,1,19.81,611.29
+Paraguay,4,0.56,19.61
+Paraguay,3,3.6,5.75
+Paraguay,2,18.83,17.3
+Paraguay,5,75.72,107.86
+Paraguay,11,31.51,6.01
+Paraguay,9,4.91,6.28
+Paraguay,10,0,0
+Paraguay,6,1.6,2.83
+New Caledonia,7,19.9,70.44
+New Caledonia,8,44.36,47.65
+New Caledonia,1,16.07,495.89
+New Caledonia,4,1.95,68.29
+New Caledonia,3,19.38,30.94
+New Caledonia,2,8.85,8.13
+New Caledonia,5,108,153.84
+New Caledonia,11,81.75,15.59
+New Caledonia,9,17.47,22.36
+New Caledonia,10,0.55,0.25
+New Caledonia,6,2.96,5.24
+South Africa,7,4.16,14.72
+South Africa,8,37.57,40.36
+South Africa,1,18.03,556.37
+South Africa,4,4.28,149.89
+South Africa,3,5.56,8.88
+South Africa,2,7.21,6.62
+South Africa,5,55.75,79.41
+South Africa,11,60.13,11.47
+South Africa,9,17.41,22.28
+South Africa,10,1.27,0.57
+South Africa,6,1.04,1.84
+Barbados,7,8.3,29.38
+Barbados,8,42.62,45.78
+Barbados,1,13.13,405.16
+Barbados,4,4.08,142.88
+Barbados,3,37.41,59.73
+Barbados,2,9.61,8.83
+Barbados,5,110.48,157.37
+Barbados,11,65.71,12.53
+Barbados,9,15.66,20.04
+Barbados,10,0.1,0.05
+Barbados,6,4.16,7.36
+Lithuania,7,45.67,161.65
+Lithuania,8,26.84,28.83
+Lithuania,1,4.49,138.55
+Lithuania,4,0.24,8.4
+Lithuania,3,42.39,67.68
+Lithuania,2,13.11,12.04
+Lithuania,5,295.46,420.85
+Lithuania,11,121.59,23.19
+Lithuania,9,3.07,3.93
+Lithuania,10,0.02,0.01
+Lithuania,6,2.13,3.77
+Turkey,7,0.01,0.04
+Turkey,8,18.78,20.17
+Turkey,1,11.64,359.19
+Turkey,4,4.68,163.89
+Turkey,3,5.58,8.91
+Turkey,2,8.2,7.53
+Turkey,5,193.94,276.25
+Turkey,11,169.96,32.41
+Turkey,9,10.74,13.74
+Turkey,10,1.71,0.77
+Turkey,6,7.97,14.11
+Estonia,7,29.68,105.05
+Estonia,8,21.11,22.68
+Estonia,1,7.19,221.87
+Estonia,4,0.44,15.41
+Estonia,3,12.78,20.41
+Estonia,2,12.66,11.63
+Estonia,5,284.85,405.74
+Estonia,11,89.36,17.04
+Estonia,9,2.56,3.28
+Estonia,10,0.04,0.02
+Estonia,6,4.29,7.59
+Mexico,7,15.23,53.91
+Mexico,8,30.12,32.35
+Mexico,1,15.33,473.05
+Mexico,4,0.89,31.17
+Mexico,3,7.56,12.07
+Mexico,2,18.34,16.85
+Mexico,5,111.87,159.35
+Mexico,11,35.21,6.71
+Mexico,9,5.64,7.22
+Mexico,10,0.02,0.01
+Mexico,6,2.51,4.44
+Costa Rica,7,10.28,36.39
+Costa Rica,8,24.47,26.29
+Costa Rica,1,15.23,469.97
+Costa Rica,4,0.02,0.7
+Costa Rica,3,11.32,18.07
+Costa Rica,2,10.55,9.69
+Costa Rica,5,183.28,261.06
+Costa Rica,11,39.31,7.5
+Costa Rica,9,45.69,58.47
+Costa Rica,10,1.54,0.69
+Costa Rica,6,1.38,2.44
+Bolivia,7,8.89,31.47
+Bolivia,8,34.31,36.86
+Bolivia,1,19.78,610.37
+Bolivia,4,1.72,60.23
+Bolivia,3,2.18,3.48
+Bolivia,2,5.18,4.76
+Bolivia,5,46.04,65.58
+Bolivia,11,49.99,9.53
+Bolivia,9,26.99,34.54
+Bolivia,10,0.01,0
+Bolivia,6,9.16,16.21
+Ecuador,7,14.44,51.11
+Ecuador,8,21.85,23.47
+Ecuador,1,16.61,512.55
+Ecuador,4,0.44,15.41
+Ecuador,3,5.17,8.25
+Ecuador,2,8.01,7.36
+Ecuador,5,139.6,198.85
+Ecuador,11,39.19,7.47
+Ecuador,9,45.07,57.68
+Ecuador,10,0,0
+Ecuador,6,0.98,1.73
+Panama,7,13.48,47.71
+Panama,8,30.81,33.1
+Panama,1,20.4,629.5
+Panama,4,0.01,0.35
+Panama,3,11.05,17.64
+Panama,2,4.53,4.16
+Panama,5,70.29,100.12
+Panama,11,38.96,7.43
+Panama,9,66.42,85
+Panama,10,3.53,1.59
+Panama,6,1.05,1.86
+Czech Republic,7,41.17,145.72
+Czech Republic,8,19.09,20.51
+Czech Republic,1,8.15,251.49
+Czech Republic,4,0.34,11.91
+Czech Republic,3,8.25,13.17
+Czech Republic,2,11.66,10.71
+Czech Republic,5,195.2,278.04
+Czech Republic,11,92.67,17.67
+Czech Republic,9,4.79,6.13
+Czech Republic,10,0.82,0.37
+Czech Republic,6,2.47,4.37
+Romania,7,25.31,89.58
+Romania,8,15.38,16.52
+Romania,1,4.78,147.5
+Romania,4,3.41,119.42
+Romania,3,6.07,9.69
+Romania,2,12.94,11.89
+Romania,5,238.33,339.48
+Romania,11,134.87,25.72
+Romania,9,2.59,3.31
+Romania,10,0.01,0
+Romania,6,1.8,3.19
+Colombia,7,6.51,23.04
+Colombia,8,27.57,29.62
+Colombia,1,16.36,504.84
+Colombia,4,0.21,7.35
+Colombia,3,6.01,9.6
+Colombia,2,10.78,9.9
+Colombia,5,108.47,154.5
+Colombia,11,29.79,5.68
+Colombia,9,28.02,35.86
+Colombia,10,0.89,0.4
+Colombia,6,0.42,0.74
+Maldives,7,1.22,4.32
+Maldives,8,18.47,19.84
+Maldives,1,9.44,291.3
+Maldives,4,0.7,24.51
+Maldives,3,179.71,286.94
+Maldives,2,10.79,9.91
+Maldives,5,111.47,158.78
+Maldives,11,77.77,14.83
+Maldives,9,50.73,64.92
+Maldives,10,0.2,0.09
+Maldives,6,15.83,28.02
+Cyprus,7,38.38,135.85
+Cyprus,8,24.45,26.26
+Cyprus,1,5.79,178.67
+Cyprus,4,5.05,176.85
+Cyprus,3,14.86,23.73
+Cyprus,2,8.98,8.25
+Cyprus,5,113.31,161.4
+Cyprus,11,83.25,15.88
+Cyprus,9,4.94,6.32
+Cyprus,10,0.04,0.02
+Cyprus,6,4.6,8.14
+Serbia,7,32.04,113.41
+Serbia,8,10.64,11.43
+Serbia,1,7.05,217.55
+Serbia,4,3.56,124.67
+Serbia,3,5.59,8.93
+Serbia,2,8.89,8.17
+Serbia,5,148.53,211.57
+Serbia,11,105.88,20.19
+Serbia,9,1.22,1.56
+Serbia,10,0,0
+Serbia,6,3.31,5.86
+United Arab Emirates,7,0,0
+United Arab Emirates,8,41.04,44.09
+United Arab Emirates,1,5.64,174.04
+United Arab Emirates,4,9.08,317.98
+United Arab Emirates,3,20.41,32.59
+United Arab Emirates,2,8.23,7.56
+United Arab Emirates,5,132.66,188.96
+United Arab Emirates,11,101.29,19.32
+United Arab Emirates,9,56.25,71.98
+United Arab Emirates,10,0.08,0.04
+United Arab Emirates,6,23.03,40.76
+Algeria,7,0,0
+Algeria,8,7.42,7.97
+Algeria,1,5.6,172.8
+Algeria,4,7.69,269.3
+Algeria,3,3.74,5.97
+Algeria,2,8.06,7.4
+Algeria,5,141.53,201.6
+Algeria,11,185.42,35.36
+Algeria,9,2.97,3.8
+Algeria,10,0,0
+Algeria,6,2.08,3.68
+Ukraine,7,20.56,72.77
+Ukraine,8,24.23,26.03
+Ukraine,1,8.96,276.49
+Ukraine,4,0.41,14.36
+Ukraine,3,15.23,24.32
+Ukraine,2,18.01,16.54
+Ukraine,5,145.03,206.58
+Ukraine,11,105.15,20.05
+Ukraine,9,3,3.84
+Ukraine,10,0.02,0.01
+Ukraine,6,2.68,4.74
+Pakistan,7,0,0
+Pakistan,8,5.01,5.38
+Pakistan,1,8.82,272.17
+Pakistan,4,2.46,86.15
+Pakistan,3,1.87,2.99
+Pakistan,2,2.95,2.71
+Pakistan,5,183.13,260.85
+Pakistan,11,113.63,21.67
+Pakistan,9,12.25,15.68
+Pakistan,10,0,0
+Pakistan,6,0.83,1.47
+Swaziland,7,2.43,8.6
+Swaziland,8,6.18,6.64
+Swaziland,1,15.1,465.95
+Swaziland,4,1.94,67.94
+Swaziland,3,1.26,2.01
+Swaziland,2,1.5,1.38
+Swaziland,5,56.6,80.62
+Swaziland,11,37.15,7.08
+Swaziland,9,21.15,27.07
+Swaziland,10,0.55,0.25
+Swaziland,6,6.44,11.4
+Latvia,7,34.96,123.74
+Latvia,8,20.53,22.05
+Latvia,1,5.11,157.68
+Latvia,4,0.34,11.91
+Latvia,3,21.3,34.01
+Latvia,2,14.03,12.89
+Latvia,5,174.11,248
+Latvia,11,72.13,13.76
+Latvia,9,2.21,2.83
+Latvia,10,0.04,0.02
+Latvia,6,3.78,6.69
+Bosnia and Herzegovina,7,9.38,33.2
+Bosnia and Herzegovina,8,13.17,14.15
+Bosnia and Herzegovina,1,9.12,281.42
+Bosnia and Herzegovina,4,0.47,16.46
+Bosnia and Herzegovina,3,4.06,6.48
+Bosnia and Herzegovina,2,4.49,4.12
+Bosnia and Herzegovina,5,174.03,247.89
+Bosnia and Herzegovina,11,93.56,17.84
+Bosnia and Herzegovina,9,1.88,2.41
+Bosnia and Herzegovina,10,1.48,0.67
+Bosnia and Herzegovina,6,2,3.54
+Fiji,7,4.31,15.26
+Fiji,8,20.26,21.76
+Fiji,1,8.96,276.49
+Fiji,4,5.9,206.62
+Fiji,3,35.01,55.9
+Fiji,2,6.44,5.92
+Fiji,5,40.2,57.26
+Fiji,11,84.22,16.06
+Fiji,9,45.62,58.38
+Fiji,10,0.3,0.14
+Fiji,6,1.3,2.3
+South Korea,7,32.76,115.95
+South Korea,8,16,17.19
+South Korea,1,14.53,448.37
+South Korea,4,0.14,4.9
+South Korea,3,33.09,52.83
+South Korea,2,11.24,10.33
+South Korea,5,29.05,41.38
+South Korea,11,50.84,9.7
+South Korea,9,85.18,109
+South Korea,10,8.35,3.76
+South Korea,6,4.88,8.64
+Poland,7,46.19,163.49
+Poland,8,27.41,29.44
+Poland,1,2.32,71.59
+Poland,4,0.02,0.7
+Poland,3,10.49,16.75
+Poland,2,7.53,6.92
+Poland,5,205.39,292.56
+Poland,11,108.83,20.75
+Poland,9,0.95,1.22
+Poland,10,0.06,0.03
+Poland,6,2.23,3.95
+Saudi Arabia,7,0,0
+Saudi Arabia,8,49.05,52.69
+Saudi Arabia,1,6.45,199.03
+Saudi Arabia,4,6.54,229.03
+Saudi Arabia,3,11.99,19.14
+Saudi Arabia,2,5.37,4.93
+Saudi Arabia,5,83.65,119.15
+Saudi Arabia,11,89.47,17.06
+Saudi Arabia,9,36.02,46.09
+Saudi Arabia,10,0.05,0.02
+Saudi Arabia,6,3.23,5.72
+Botswana,7,0.74,2.62
+Botswana,8,5.33,5.73
+Botswana,1,7.85,242.23
+Botswana,4,3.76,131.67
+Botswana,3,3.98,6.35
+Botswana,2,1.95,1.79
+Botswana,5,117.74,167.71
+Botswana,11,38.2,7.28
+Botswana,9,7.06,9.03
+Botswana,10,1.16,0.52
+Botswana,6,1.08,1.91
+Macedonia,7,10.35,36.63
+Macedonia,8,18.77,20.16
+Macedonia,1,7.69,237.3
+Macedonia,4,0.94,32.92
+Macedonia,3,5.47,8.73
+Macedonia,2,6.38,5.86
+Macedonia,5,157.93,224.96
+Macedonia,11,104.8,19.99
+Macedonia,9,2.81,3.6
+Macedonia,10,0.46,0.21
+Macedonia,6,5.87,10.39
+Hungary,7,34.93,123.63
+Hungary,8,23.78,25.54
+Hungary,1,4.96,153.06
+Hungary,4,0.11,3.85
+Hungary,3,4.93,7.87
+Hungary,2,12.45,11.44
+Hungary,5,159.05,226.55
+Hungary,11,109.98,20.97
+Hungary,9,2.15,2.75
+Hungary,10,0.01,0
+Hungary,6,0.64,1.13
+Trinidad and Tobago,7,8.92,31.57
+Trinidad and Tobago,8,58.27,62.59
+Trinidad and Tobago,1,6.13,189.16
+Trinidad and Tobago,4,2.79,97.71
+Trinidad and Tobago,3,20.54,32.8
+Trinidad and Tobago,2,4.2,3.86
+Trinidad and Tobago,5,103.8,147.85
+Trinidad and Tobago,11,90.17,17.2
+Trinidad and Tobago,9,16.38,20.96
+Trinidad and Tobago,10,0.04,0.02
+Trinidad and Tobago,6,3.78,6.69
+Tunisia,7,0,0
+Tunisia,8,18.5,19.87
+Tunisia,1,5.53,170.64
+Tunisia,4,5.34,187.01
+Tunisia,3,12.63,20.17
+Tunisia,2,7.67,7.05
+Tunisia,5,114.47,163.05
+Tunisia,11,197.5,37.66
+Tunisia,9,1.07,1.37
+Tunisia,10,1.88,0.85
+Tunisia,6,6.34,11.22
+Egypt,7,0.02,0.07
+Egypt,8,14.43,15.5
+Egypt,1,12.88,397.45
+Egypt,4,1.58,55.33
+Egypt,3,21.46,34.26
+Egypt,2,4.59,4.22
+Egypt,5,59.46,84.69
+Egypt,11,146.83,28
+Egypt,9,39.77,50.89
+Egypt,10,0.64,0.29
+Egypt,6,1.82,3.22
+Mauritius,7,4.08,14.44
+Mauritius,8,38.51,41.37
+Mauritius,1,5.99,184.84
+Mauritius,4,4.08,142.88
+Mauritius,3,19.66,31.39
+Mauritius,2,6.32,5.81
+Mauritius,5,117.27,167.04
+Mauritius,11,114.02,21.74
+Mauritius,9,45.56,58.3
+Mauritius,10,0.3,0.14
+Mauritius,6,2.33,4.12
+Bulgaria,7,26.26,92.95
+Bulgaria,8,20.68,22.21
+Bulgaria,1,3.84,118.49
+Bulgaria,4,1.63,57.08
+Bulgaria,3,6.24,9.96
+Bulgaria,2,8.36,7.68
+Bulgaria,5,155.71,221.79
+Bulgaria,11,121.17,23.11
+Bulgaria,9,2.24,2.87
+Bulgaria,10,0.04,0.02
+Bulgaria,6,2.26,4
+Morocco,7,0.01,0.04
+Morocco,8,20.77,22.31
+Morocco,1,8.04,248.1
+Morocco,4,4.36,152.69
+Morocco,3,17.44,27.85
+Morocco,2,6.68,6.14
+Morocco,5,54.68,77.89
+Morocco,11,179.7,34.27
+Morocco,9,1.1,1.41
+Morocco,10,0,0
+Morocco,6,3.23,5.72
+Slovakia,7,31.78,112.49
+Slovakia,8,15.13,16.25
+Slovakia,1,5.19,160.15
+Slovakia,4,0.16,5.6
+Slovakia,3,8.39,13.4
+Slovakia,2,16.05,14.74
+Slovakia,5,143.14,203.89
+Slovakia,11,123.62,23.57
+Slovakia,9,2.88,3.69
+Slovakia,10,0.02,0.01
+Slovakia,6,3.7,6.55
+Niger,7,0.09,0.32
+Niger,8,1.08,1.16
+Niger,1,8.97,276.8
+Niger,4,4.17,146.03
+Niger,3,2.7,4.31
+Niger,2,0.3,0.28
+Niger,5,58.92,83.93
+Niger,11,4.79,0.91
+Niger,9,13.17,16.85
+Niger,10,0,0
+Niger,6,6.95,12.3
+Kenya,7,0.29,1.03
+Kenya,8,0.47,0.5
+Kenya,1,9.54,294.38
+Kenya,4,1.86,65.14
+Kenya,3,4.27,6.82
+Kenya,2,1.84,1.69
+Kenya,5,94.86,135.12
+Kenya,11,34.65,6.61
+Kenya,9,12.94,16.56
+Kenya,10,0.2,0.09
+Kenya,6,1.64,2.9
+Jordan,7,0.02,0.07
+Jordan,8,33.39,35.87
+Jordan,1,5.61,173.11
+Jordan,4,5.68,198.91
+Jordan,3,5.13,8.19
+Jordan,2,3.92,3.6
+Jordan,5,77.68,110.65
+Jordan,11,136.74,26.08
+Jordan,9,19.67,25.17
+Jordan,10,0.02,0.01
+Jordan,6,3.56,6.3
+Japan,7,20.62,72.98
+Japan,8,19.42,20.86
+Japan,1,9.15,282.35
+Japan,4,0.14,4.9
+Japan,3,31.1,49.66
+Japan,2,19.15,17.59
+Japan,5,72.06,102.64
+Japan,11,45.04,8.59
+Japan,9,59.85,76.59
+Japan,10,7.34,3.3
+Japan,6,2.59,4.58
+Georgia,7,8.93,31.61
+Georgia,8,12.28,13.19
+Georgia,1,6.04,186.38
+Georgia,4,0.63,22.06
+Georgia,3,10.42,16.64
+Georgia,2,6.12,5.62
+Georgia,5,149.26,212.61
+Georgia,11,163.43,31.17
+Georgia,9,2.64,3.38
+Georgia,10,0,0
+Georgia,6,2.47,4.37
+Grenada,7,11.52,40.78
+Grenada,8,43.51,46.74
+Grenada,1,3.46,106.77
+Grenada,4,1.25,43.77
+Grenada,3,27.95,44.63
+Grenada,2,10.34,9.5
+Grenada,5,86.88,123.75
+Grenada,11,59.59,11.36
+Grenada,9,9.56,12.23
+Grenada,10,0.01,0
+Grenada,6,0.18,0.32
+El Salvador,7,3.23,11.43
+El Salvador,8,19.84,21.31
+El Salvador,1,5.95,183.6
+El Salvador,4,0.02,0.7
+El Salvador,3,6.25,9.98
+El Salvador,2,9.51,8.74
+El Salvador,5,124.34,177.11
+El Salvador,11,28.19,5.38
+El Salvador,9,10.53,13.48
+El Salvador,10,0.8,0.36
+El Salvador,6,1.1,1.95
+Cuba,7,19.82,70.15
+Cuba,8,20.15,21.65
+Cuba,1,6.39,197.18
+Cuba,4,1.24,43.42
+Cuba,3,4.76,7.6
+Cuba,2,9.82,9.02
+Cuba,5,99.94,142.35
+Cuba,11,54.62,10.42
+Cuba,9,67.7,86.64
+Cuba,10,6.34,2.85
+Cuba,6,0.23,0.41
+China,7,38.43,136.02
+China,8,13.2,14.18
+China,1,5.12,157.99
+China,4,3.13,109.61
+China,3,21.01,33.55
+China,2,18.76,17.23
+China,5,32.66,46.52
+China,11,63.36,12.08
+China,9,78.18,100.05
+China,10,3.66,1.65
+China,6,6.39,11.31
+Honduras,7,6.48,22.94
+Honduras,8,20.29,21.8
+Honduras,1,7.19,221.87
+Honduras,4,0.04,1.4
+Honduras,3,2.7,4.31
+Honduras,2,5.19,4.77
+Honduras,5,91.33,130.09
+Honduras,11,37.36,7.12
+Honduras,9,14.42,18.45
+Honduras,10,0.01,0
+Honduras,6,0.75,1.33
+Taiwan. ROC,7,39.37,139.35
+Taiwan. ROC,8,32.13,34.51
+Taiwan. ROC,1,5.21,160.77
+Taiwan. ROC,4,0.92,32.22
+Taiwan. ROC,3,18.29,29.2
+Taiwan. ROC,2,13.08,12.02
+Taiwan. ROC,5,41.72,59.43
+Taiwan. ROC,11,50.92,9.71
+Taiwan. ROC,9,45.85,58.67
+Taiwan. ROC,10,16.95,7.63
+Taiwan. ROC,6,9.06,16.04
+Angola,7,8.89,31.47
+Angola,8,17.33,18.62
+Angola,1,8.42,259.82
+Angola,4,1.08,37.82
+Angola,3,15.24,24.33
+Angola,2,1.11,1.02
+Angola,5,12.3,17.52
+Angola,11,40.72,7.77
+Angola,9,8.12,10.39
+Angola,10,0.52,0.23
+Angola,6,2.26,4
+Jamaica,7,3.99,14.12
+Jamaica,8,52.51,56.41
+Jamaica,1,3.97,122.51
+Jamaica,4,1.26,44.13
+Jamaica,3,21.95,35.05
+Jamaica,2,2.27,2.09
+Jamaica,5,91.13,129.81
+Jamaica,11,70.67,13.48
+Jamaica,9,23.45,30.01
+Jamaica,10,0,0
+Jamaica,6,1.82,3.22
+Namibia,7,4.21,14.9
+Namibia,8,12.19,13.09
+Namibia,1,3.75,115.72
+Namibia,4,2.27,79.5
+Namibia,3,10.7,17.08
+Namibia,2,1.63,1.5
+Namibia,5,73.05,104.05
+Namibia,11,36.26,6.91
+Namibia,9,6.31,8.07
+Namibia,10,0.07,0.03
+Namibia,6,0.71,1.26
+Belize,7,16.8,59.46
+Belize,8,28.31,30.41
+Belize,1,4.86,149.97
+Belize,4,0.14,4.9
+Belize,3,7.57,12.09
+Belize,2,4.85,4.46
+Belize,5,80.3,114.38
+Belize,11,54.06,10.31
+Belize,9,28.42,36.37
+Belize,10,1.88,0.85
+Belize,6,5.58,9.88
+Malaysia,7,7.76,27.47
+Malaysia,8,41.01,44.05
+Malaysia,1,6.52,201.19
+Malaysia,4,0.94,32.92
+Malaysia,3,49.43,78.92
+Malaysia,2,16.57,15.22
+Malaysia,5,25.28,36.01
+Malaysia,11,51.04,9.73
+Malaysia,9,81.25,103.98
+Malaysia,10,0.04,0.02
+Malaysia,6,2.9,5.13
+Zimbabwe,7,2.65,9.38
+Zimbabwe,8,4.97,5.34
+Zimbabwe,1,7.37,227.42
+Zimbabwe,4,0.96,33.62
+Zimbabwe,3,2.8,4.47
+Zimbabwe,2,1.75,1.61
+Zimbabwe,5,31.9,45.44
+Zimbabwe,11,31.31,5.97
+Zimbabwe,9,10.09,12.91
+Zimbabwe,10,0.54,0.24
+Zimbabwe,6,2.22,3.93
+Guatemala,7,4.85,17.17
+Guatemala,8,16.45,17.67
+Guatemala,1,5.6,172.8
+Guatemala,4,0.23,8.05
+Guatemala,3,1.08,1.72
+Guatemala,2,14.61,13.42
+Guatemala,5,46.6,66.38
+Guatemala,11,35.9,6.85
+Guatemala,9,5.66,7.24
+Guatemala,10,0.32,0.14
+Guatemala,6,2,3.54
+Uganda,7,3.37,11.93
+Uganda,8,1.51,1.62
+Uganda,1,5.15,158.92
+Uganda,4,1.25,43.77
+Uganda,3,12.5,19.96
+Uganda,2,0.97,0.89
+Uganda,5,37.27,53.09
+Uganda,11,10.14,1.93
+Uganda,9,4.64,5.94
+Uganda,10,0.01,0
+Uganda,6,3.77,6.67
+Nepal,7,0.67,2.37
+Nepal,8,1.56,1.68
+Nepal,1,7.89,243.47
+Nepal,4,2.1,73.54
+Nepal,3,2.17,3.46
+Nepal,2,1.42,1.3
+Nepal,5,52.1,74.21
+Nepal,11,50.46,9.62
+Nepal,9,87.75,112.29
+Nepal,10,0.01,0
+Nepal,6,2.42,4.28
+Iran,7,0,0
+Iran,8,25.38,27.26
+Iran,1,3.58,110.47
+Iran,4,3.69,129.22
+Iran,3,9.8,15.65
+Iran,2,7.7,7.07
+Iran,5,46.69,66.51
+Iran,11,153.31,29.24
+Iran,9,29.95,38.33
+Iran,10,0,0
+Iran,6,12.16,21.52
+Tanzania,7,0.32,1.13
+Tanzania,8,1.84,1.98
+Tanzania,1,6.09,187.92
+Tanzania,4,1.28,44.83
+Tanzania,3,5.5,8.78
+Tanzania,2,0.58,0.53
+Tanzania,5,40.29,57.39
+Tanzania,11,15.94,3.04
+Tanzania,9,21.01,26.89
+Tanzania,10,0.04,0.02
+Tanzania,6,5.94,10.51
+Senegal,7,0.94,3.33
+Senegal,8,4.62,4.96
+Senegal,1,5.85,180.52
+Senegal,4,3.19,111.71
+Senegal,3,22.94,36.63
+Senegal,2,1.63,1.5
+Senegal,5,16.86,24.02
+Senegal,11,37.32,7.12
+Senegal,9,72.29,92.51
+Senegal,10,0,0
+Senegal,6,4.03,7.13
+Peru,7,3.85,13.63
+Peru,8,11.72,12.59
+Peru,1,4.69,144.72
+Peru,4,1,35.02
+Peru,3,15.74,25.13
+Peru,2,8.76,8.05
+Peru,5,62.15,88.53
+Peru,11,56.12,10.7
+Peru,9,48.92,62.6
+Peru,10,1.59,0.72
+Peru,6,0.65,1.15
+Nicaragua,7,3.38,11.96
+Nicaragua,8,21.31,22.89
+Nicaragua,1,4.73,145.96
+Nicaragua,4,0.01,0.35
+Nicaragua,3,3.59,5.73
+Nicaragua,2,4.9,4.5
+Nicaragua,5,85.16,121.3
+Nicaragua,11,28.17,5.37
+Nicaragua,9,43.33,55.45
+Nicaragua,10,0.01,0
+Nicaragua,6,2.36,4.18
+Vietnam,7,35,123.88
+Vietnam,8,12.36,13.28
+Vietnam,1,7.44,229.58
+Vietnam,4,0.14,4.9
+Vietnam,3,26.52,42.34
+Vietnam,2,3.84,3.53
+Vietnam,5,16.36,23.3
+Vietnam,11,10.49,2
+Vietnam,9,144.56,184.99
+Vietnam,10,5.75,2.59
+Vietnam,6,6.28,11.12
+Ethiopia,7,0.02,0.07
+Ethiopia,8,0.66,0.71
+Ethiopia,1,3.61,111.4
+Ethiopia,4,1.57,54.98
+Ethiopia,3,0.24,0.38
+Ethiopia,2,0.36,0.33
+Ethiopia,5,44.14,62.87
+Ethiopia,11,31.26,5.96
+Ethiopia,9,2.25,2.88
+Ethiopia,10,0.45,0.2
+Ethiopia,6,1.21,2.14
+Myanmar,7,11.31,40.03
+Myanmar,8,21.87,23.49
+Myanmar,1,4.94,152.44
+Myanmar,4,0.89,31.17
+Myanmar,3,54.26,86.64
+Myanmar,2,6.45,5.92
+Myanmar,5,31.48,44.84
+Myanmar,11,6.22,1.19
+Myanmar,9,132.8,169.94
+Myanmar,10,0.38,0.17
+Myanmar,6,4.5,7.97
+Congo,7,2.39,8.46
+Congo,8,13.02,13.99
+Congo,1,4.35,134.23
+Congo,4,0.4,14.01
+Congo,3,26.22,41.86
+Congo,2,0.6,0.55
+Congo,5,10.69,15.23
+Congo,11,40.07,7.64
+Congo,9,16.51,21.13
+Congo,10,0,0
+Congo,6,3.08,5.45
+Zambia,7,1.66,5.88
+Zambia,8,3.29,3.53
+Zambia,1,4.76,146.88
+Zambia,4,0.68,23.81
+Zambia,3,6.2,9.9
+Zambia,2,3.32,3.05
+Zambia,5,9.71,13.83
+Zambia,11,12.1,2.31
+Zambia,9,3.05,3.9
+Zambia,10,7.3,3.29
+Zambia,6,5.04,8.92
+Cameroon,7,1.47,5.2
+Cameroon,8,3.29,3.53
+Cameroon,1,4.17,128.68
+Cameroon,4,1.4,49.03
+Cameroon,3,14.71,23.49
+Cameroon,2,0.4,0.37
+Cameroon,5,15.27,21.75
+Cameroon,11,22.6,4.31
+Cameroon,9,23.85,30.52
+Cameroon,10,0.64,0.29
+Cameroon,6,9.29,16.44
+Madagascar,7,2.56,9.06
+Madagascar,8,3.14,3.37
+Madagascar,1,7.51,231.74
+Madagascar,4,0.57,19.96
+Madagascar,3,4.41,7.04
+Madagascar,2,0.71,0.65
+Madagascar,5,24.84,35.38
+Madagascar,11,9.01,1.72
+Madagascar,9,102.53,131.21
+Madagascar,10,0,0
+Madagascar,6,0.35,0.62
+Malawi,7,5.45,19.29
+Malawi,8,1.38,1.48
+Malawi,1,2.35,72.52
+Malawi,4,2.07,72.49
+Malawi,3,7.33,11.7
+Malawi,2,1.08,0.99
+Malawi,5,7.98,11.37
+Malawi,11,11.77,2.24
+Malawi,9,4.75,6.08
+Malawi,10,1.76,0.79
+Malawi,6,5.08,8.99
+Guinea,7,0.16,0.57
+Guinea,8,1.83,1.97
+Guinea,1,6.26,193.17
+Guinea,4,1.6,56.03
+Guinea,3,9.18,14.66
+Guinea,2,1.95,1.79
+Guinea,5,20.62,29.37
+Guinea,11,18.55,3.54
+Guinea,9,97.12,124.28
+Guinea,10,0,0
+Guinea,6,4.14,7.33
+Nigeria,7,1.47,5.2
+Nigeria,8,1.73,1.86
+Nigeria,1,2.33,71.9
+Nigeria,4,2.72,95.25
+Nigeria,3,16.03,25.59
+Nigeria,2,3.46,3.18
+Nigeria,5,7.91,11.27
+Nigeria,11,20.82,3.97
+Nigeria,9,28.23,36.13
+Nigeria,10,2.6,1.17
+Nigeria,6,6.93,12.27
+Rwanda,7,0.76,2.69
+Rwanda,8,1.34,1.44
+Rwanda,1,2.53,78.07
+Rwanda,4,1.93,67.59
+Rwanda,3,3.88,6.2
+Rwanda,2,0.16,0.15
+Rwanda,5,7.23,10.3
+Rwanda,11,11.34,2.16
+Rwanda,9,8.7,11.13
+Rwanda,10,1.93,0.87
+Rwanda,6,0.58,1.03
+Philippines,7,18.4,65.13
+Philippines,8,11.91,12.79
+Philippines,1,4.06,125.28
+Philippines,4,0.56,19.61
+Philippines,3,28.51,45.52
+Philippines,2,4.02,3.69
+Philippines,5,15.66,22.31
+Philippines,11,23.12,4.41
+Philippines,9,119.44,152.85
+Philippines,10,0.03,0.01
+Philippines,6,2.08,3.68
+Ghana,7,1.36,4.81
+Ghana,8,8.63,9.27
+Ghana,1,1.09,33.64
+Ghana,4,1.74,60.93
+Ghana,3,26.05,41.59
+Ghana,2,1.21,1.11
+Ghana,5,9.08,12.93
+Ghana,11,14.45,2.76
+Ghana,9,32.03,40.99
+Ghana,10,0.01,0
+Ghana,6,5.56,9.84
+Togo,7,1.57,5.56
+Togo,8,6.63,7.12
+Togo,1,1.53,47.21
+Togo,4,1.58,55.33
+Togo,3,11.69,18.67
+Togo,2,0.86,0.79
+Togo,5,7.96,11.34
+Togo,11,12.91,2.46
+Togo,9,25.99,33.26
+Togo,10,0.01,0
+Togo,6,3.59,6.35
+Gambia,7,0.18,0.64
+Gambia,8,2.66,2.86
+Gambia,1,2.16,66.65
+Gambia,4,0.71,24.86
+Gambia,3,23.13,36.93
+Gambia,2,0.99,0.91
+Gambia,5,45.71,65.11
+Gambia,11,37.91,7.23
+Gambia,9,61.84,79.14
+Gambia,10,0,0
+Gambia,6,5.27,9.33
+India,7,0.28,0.99
+India,8,1.88,2.02
+India,1,0.81,24.99
+India,4,0.58,20.31
+India,3,4.71,7.52
+India,2,2.58,2.37
+India,5,84.5,120.36
+India,11,60.56,11.55
+India,9,69.49,88.93
+India,10,0.39,0.18
+India,6,1.92,3.4
+Thailand,7,13,46.01
+Thailand,8,13.69,14.71
+Thailand,1,2.56,79
+Thailand,4,0.05,1.75
+Thailand,3,19.45,31.06
+Thailand,2,12.35,11.34
+Thailand,5,29.35,41.81
+Thailand,11,10.93,2.08
+Thailand,9,114.57,146.62
+Thailand,10,2.13,0.96
+Thailand,6,1.5,2.66
+Mozambique,7,5.13,18.16
+Mozambique,8,1.41,1.51
+Mozambique,1,1.04,32.09
+Mozambique,4,0.9,31.52
+Mozambique,3,7.74,12.36
+Mozambique,2,1.7,1.56
+Mozambique,5,4.79,6.82
+Mozambique,11,14.65,2.79
+Mozambique,9,23.41,29.96
+Mozambique,10,0.03,0.01
+Mozambique,6,2.61,4.62
+Cambodia,7,6.52,23.08
+Cambodia,8,1.84,1.98
+Cambodia,1,4.85,149.66
+Cambodia,4,0,0
+Cambodia,3,39.59,63.21
+Cambodia,2,1.37,1.26
+Cambodia,5,3.47,4.94
+Cambodia,11,2.74,0.52
+Cambodia,9,159.1,203.6
+Cambodia,10,4.33,1.95
+Cambodia,6,1.25,2.21
+Sierra Leone,7,1.22,4.32
+Sierra Leone,8,4.97,5.34
+Sierra Leone,1,1.99,61.41
+Sierra Leone,4,0.65,22.76
+Sierra Leone,3,32.03,51.14
+Sierra Leone,2,1.92,1.76
+Sierra Leone,5,7,9.97
+Sierra Leone,11,8.72,1.66
+Sierra Leone,9,103.3,132.19
+Sierra Leone,10,0,0
+Sierra Leone,6,5.57,9.86
+Sri Lanka,7,0.05,0.18
+Sri Lanka,8,4.96,5.33
+Sri Lanka,1,1.38,42.58
+Sri Lanka,4,0.09,3.15
+Sri Lanka,3,24.92,39.79
+Sri Lanka,2,4.57,4.2
+Sri Lanka,5,34.98,49.83
+Sri Lanka,11,37.01,7.06
+Sri Lanka,9,109.72,140.41
+Sri Lanka,10,0,0
+Sri Lanka,6,1.09,1.93
+Indonesia,7,2.98,10.55
+Indonesia,8,7.5,8.06
+Indonesia,1,2.59,79.92
+Indonesia,4,0.46,16.11
+Indonesia,3,25.65,40.95
+Indonesia,2,4.88,4.48
+Indonesia,5,14.82,21.11
+Indonesia,11,25.45,4.85
+Indonesia,9,134.62,172.27
+Indonesia,10,1.12,0.5
+Indonesia,6,4.92,8.71
+Liberia,7,4.01,14.19
+Liberia,8,8.91,9.57
+Liberia,1,0.78,24.07
+Liberia,4,0.48,16.81
+Liberia,3,4.13,6.59
+Liberia,2,2.05,1.88
+Liberia,5,3.04,4.33
+Liberia,11,10.95,2.09
+Liberia,9,94.75,121.25
+Liberia,10,0.63,0.28
+Liberia,6,1.31,2.32
+Bangladesh,7,0,0
+Bangladesh,8,1.4,1.5
+Bangladesh,1,1.28,39.5
+Bangladesh,4,1.33,46.58
+Bangladesh,3,18.07,28.85
+Bangladesh,2,2.08,1.91
+Bangladesh,5,21.91,31.21
+Bangladesh,11,17.47,3.33
+Bangladesh,9,171.73,219.76
+Bangladesh,10,0.61,0.27
+Bangladesh,6,0.72,1.27
