@@ -2,7 +2,7 @@
 
 ## Measure of Spread ----
 ### Quantiles ----
-# also called percentiles, are a generalized version of quartile, so they can split data into 5 pieces or then pieces.
+# also called percentiles, are a generalized version of quartile, so they can split data into 5 pieces or 10 pieces.
 
 # Load packages ----
 #install.packages("tidyverse")
@@ -48,7 +48,7 @@ iqr
 # Finding Outliers
 # Calculate the IQR:
 iqr_2 <- quantile(food_consumption$consumption, 0.75) - quantile(food_consumption$consumption, 0.25)
-# Calculate the lower_threshold
+# Calculate the lower_threshold and upper_threshold
 lower_threshold <- quantile(food_consumption$consumption, 0.25) - 1.5 * iqr_2
 upper_threshold <- quantile(food_consumption$consumption, 0.75) + 1.5 * iqr_2
 
