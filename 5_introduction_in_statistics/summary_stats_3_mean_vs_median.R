@@ -68,7 +68,3 @@ food_consumption %>%
   # Summarize the mean_co2 and median_co2
   summarize(mean_co2 = mean(co2_emission),
             median_co2 = median(co2_emission))
-
-# Median measures the central tendency to summarizes the kilograms co2 emissions per person per year of rice
-
-
