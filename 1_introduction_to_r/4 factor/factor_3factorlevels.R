@@ -15,7 +15,7 @@ factor_levels_vector <- factor(levels_factor)
 
 # Specify the levels of factor_levels_vector
 # Modifies the levels for factor_levels_vector and levels_factor to be "Down" and "Up". This essentially changes the labels associated with the levels "D" and "U" in the both vectors
-levels(factor_levels_vector) <- levels(levels_factor) <- c("Down", "Up")
+x <- levels(factor_levels_vector) <- levels(levels_factor) <- c("Down", "Up")
 
 # Print out levels
 factor_levels_vector

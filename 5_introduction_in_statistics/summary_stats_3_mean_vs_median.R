@@ -25,9 +25,12 @@
 # median(df$col_name)
 
 # Load packages ----
-library(dplyr)
+#install.packages("tidyverse")
 library(tidyverse)
+library(dplyr)
 library(readr)
+library(ggplot2)
+
 
 # Restart Environment ----
 rm(list = ls())
@@ -35,8 +38,37 @@ rm(list = ls())
 # Load CSV ----
 food_consumption <- read_csv("F:\\R\\dataset\\2018 Food Carbon Footprint Index by nu3\\food_consumption.csv")
 
+levels_category <- food_consumption$food_category
+factor_category <- factor(food_consumption$food_category)
+levels(factor_category)<- levels(levels_category)<- c("beef", "eggs", "fish", "lamb_goat",
+                                                       "dairy", "nuts", "pork", "poultry",
+                                                       "rice", "soybeans", "wheat")
+
 # Code ----
-# Calculate mean food consumption
-mean(food_consumption$consumption)
+food_consumption %>%
+  # Filter for rice food category
+  filter(factor_category == "rice") %>%
+  
+  # Create histogram of co2_emission
+  ggplot(aes(x = co2_emission)) +
+  geom_histogram()
+
+# Histogram plotted as Right-skewed
+
+food_consumption %>%
+  # Filter for rice food category
+  filter(factor_category == "rice") %>%
+  # Create histogram of co2_emission
+  ggplot(aes(co2_emission)) +
+  geom_histogram()
+
+food_consumption %>%
+  # Filter for rice food category
+  filter(factor_category == "rice") %>% 
+  # Summarize the mean_co2 and median_co2
+  summarize(mean_co2 = mean(co2_emission),
+            median_co2 = median(co2_emission))
+
+# Median measures the central tendency to summarizes the kilograms co2 emissions per person per year of rice
 
 
