@@ -49,7 +49,10 @@ num_users <- data$num_users
 amir_deals <- data.frame(product, client, status, amount, num_users)
 
 ## Code ----
-
+# Histogram of amount with 10 bins
+amir_deals %>%
+  ggplot(aes(amount)) + 
+  geom_histogram(bins = 10) # normal distribution
 
 
 
