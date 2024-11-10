@@ -1,46 +1,7 @@
 # Introduction to Statistics in R ----
 
 ## Probability Distribution ----
-# Describes the probability of each possible outcome in a scenario
-#
-#   •       ••      •••     ••••      •••••     ••••••
-#   1/6     1/6     1/6     1/6       1/6       1/6
-#
-# Expected value: mean of probability distribution
-#
-# Expected value of a fair die roll:
-#
-#       1	        1		      1	        1	        1	    	  1	 	
-#   1 x -  +  2 x -  +  3 x -  +  4 x -  +  5 x -  +  6 x -   = 3.5
-#       6         6         6         6         6         6
-
-# Probability = area
-#
-# P(die roll) ≤ 2 = 1/3
-#
-#    1/6  +  1/6
-#       = 1/3
-#  _______________________________________________
-# |   1   |   2   |   3   |   4   |   5   |   6   |
-# ------------------------------------------------
-
-# Uneven die
-#
-#   •       ••• | •••     ••••      •••••     ••••••
-#   1/6        1/3        1/6        1/6      1/6
-#
-#       1	       		        1	        1	        1		      1	 	
-#   1 x -  +  2 x 0  +  3 x -  +  4 x -  +  5 x -  +  6 x -   = 3.67
-#       6                   6         6         6         6
-#
-#                  _______
-#  _______        |       |_______________________
-# |   1   |       |   3   |   4   |   5   |   6   |
-# ------------------------------------------------
-
-# Law of Large Numbers:
-# As the size of your sample increase, the sample mean will approach the expect value
-
+# Discrete Probability
 
 # Load packages ----
 library(dplyr)
@@ -51,36 +12,32 @@ library(ggplot2)
 rm(list = ls())
 
 # Load data frame ----
-# Data set
-vector_die <- c(1, 2, 3, 4 , 5, 6)
-die <- data.frame(n = vector_die)
+group_id <- c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J")
+group_size <- c(2, 4, 6, 2, 2, 2, 3, 2, 4, 2)
+restaurant_groups <- data.frame(group_id, group_size)
 
-# Mean of a die
-mean(die$n)
+## Code ----
+# Create a histogram of group_size
+ggplot(restaurant_groups, aes(group_size)) +
+  geom_histogram(bins = 5)
 
-# sample roll 10 times, 100 times and 1000 times
-# Roll 10 times
-rolls_10 <- die %>%
-  sample_n(10, replace = TRUE)
-# Roll 10 times
-rolls_100 <- die %>%
-  sample_n(100, replace = TRUE)
-# Roll 10 times
-rolls_1000 <- die %>%
-  sample_n(1000, replace = TRUE)
+# Count number of each group sizes
+size_distribution <- restaurant_groups %>%
+  count(group_size) %>%
+  # Calculate probability
+  mutate(probability = n / sum(n))
 
-mean_die <- mean(die$n)
-mean_10 <- mean(rolls_10$n)
-mean_100 <- mean(rolls_100$n)
-mean_1000 <- mean(rolls_1000$n)
-
-roll_number <- data.frame(sample_size = c(6, 10, 100 , 1000),
-                          mean = c(mean_die ,mean_10, mean_100, mean_1000))
-roll_number
-
-
-# Visualize a sample
-ggplot(rolls_10, aes(n)) +
-  geom_histogram(bins = 6)
+  # Calculate expected group size
+  expected_val <- sum(size_distribution$group_size *
+                      size_distribution$probability)
+  
+  # Calculate probability of picking group of 4 or more
+  size_distribution %>%
+    filter(group_size >= 4) %>%
+  # Calculate prob_4_or_more by taking sum of probabilities
+    summarize(prob_4_or_more = sum(probability))
+    
+  
+  
 
 
