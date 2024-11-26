@@ -35,7 +35,7 @@ rm(list = ls())
 
 # Code ----
 # What's the probability that Amir responds to 5 leads in a day, given that he responds to an average of 4?
-dpois(5, lambda = 4)
+dpois(5, lambda = 4) 
 
 # Amir's coworker responds to an average of 5.5 leads per day. What is the probability that she answers 5 leads in a day?
 dpois(5, lambda = 5.5)
@@ -45,4 +45,7 @@ ppois(2, lambda = 4)
 
 # What's the probability that Amir responds to more than 10 leads in a day?
 ppois(10, lambda = 4, lower.tail = FALSE)
+
+# Sampling from a Poisson distribution
+rpois(10, lambda = 4)
 
