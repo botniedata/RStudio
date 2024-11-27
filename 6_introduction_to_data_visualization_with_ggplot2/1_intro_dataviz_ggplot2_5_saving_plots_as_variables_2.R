@@ -21,5 +21,8 @@ plt_price_vs_carat <- ggplot(   # saving ggplot as plt_price_vs_carat
   aes(carat, price)             # aesthetic x for carat and y for price
 ) 
 
-# Add a point layer to plt_price_vs_carat
-plt_price_vs_carat + geom_point()
+# Edit this to make points 20% opaque: plt_price_vs_carat_transparent
+plt_price_vs_carat_transparent <- plt_price_vs_carat + geom_point(alpha = 0.2)
+
+# See the plot
+plt_price_vs_carat_transparent

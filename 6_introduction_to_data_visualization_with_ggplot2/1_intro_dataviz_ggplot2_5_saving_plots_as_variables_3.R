@@ -21,5 +21,11 @@ plt_price_vs_carat <- ggplot(   # saving ggplot as plt_price_vs_carat
   aes(carat, price)             # aesthetic x for carat and y for price
 ) 
 
-# Add a point layer to plt_price_vs_carat
-plt_price_vs_carat + geom_point()
+# Edit this to map color to clarity,
+# Assign the updated plot to a new object
+plt_price_vs_carat_by_clarity <- plt_price_vs_carat + geom_point(
+                                                        aes(color = clarity)
+                                                                  )
+
+# See the plot
+plt_price_vs_carat_by_clarity
