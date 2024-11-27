@@ -36,12 +36,20 @@ world_happiness <- data.frame(country, social_support, freedom, corruption,
                               generosity, gdp_per_cap, life_exp, happiness_score)
 
 # Code ----
-# Create a scatter plot of happiness_score vs. life_exp
-ggplot(world_happiness, aes(x = life_exp, y = happiness_score)) +
+# Scatterplot of happiness_score vs. gdp_per_cap
+ggplot(world_happiness, aes(x = gdp_per_cap, y = happiness_score)) +
   geom_point()
 
-# Calculate the correlation 
-cor(world_happiness$life_exp, world_happiness$happiness_score)
+# Calculate correlation
+cor(world_happiness$happiness_score, world_happiness$gdp_per_cap)
 
+# Create log_gdp_per_cap column
+world_happiness <- world_happiness %>%
+  mutate(log_gdp_per_cap = log(gdp_per_cap))
 
+# Scatterplot of happiness_score vs. log_gdp_per_cap
+ggplot(world_happiness, aes(x = log_gdp_per_cap, y = happiness_score)) +
+  geom_point()
 
+# Calculate correlation
+cor(world_happiness$log_gdp_per_cap, world_happiness$happiness_score)
