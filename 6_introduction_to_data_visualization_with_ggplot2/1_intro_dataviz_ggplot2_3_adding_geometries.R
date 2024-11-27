@@ -1,14 +1,6 @@
-# Introduction to Statistics in R ----
+# Introduction to Data Visualization with ggplot2 ----
 
-## exponential distribution ----
-# probability of time between Poisson events
-# examples:
-# probability of > 1 day between adoptions
-# probability of < 10 minutes between restaurant arrival
-# probability of 6-8 months between earthquakes
-
-# Also uses lambda (rate)
-# Continuous (time)
+## ggplot2 layers ----
 
 # Restart Environment ----
 rm(list = ls())
