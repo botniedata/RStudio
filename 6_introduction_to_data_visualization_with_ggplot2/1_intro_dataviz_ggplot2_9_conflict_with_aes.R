@@ -16,17 +16,18 @@ mtcars <- mtcars %>%
           mutate(fcyl = factor(cyl))
 
 # Code 1 ----
-# A hexadecimal color
-my_blue <- "#4ABEFF"
+# Add a point layer, setting alpha, the transparency, to 0.5
+ggplot(mtcars, aes(wt, mpg, color = fcyl)) +
+  geom_point(alpha = 0.5) +
 
-ggplot(mtcars, aes(wt, mpg)) +
-  geom_point(color = my_blue, alpha = 0.6)
+# code 2 ----
+# Add a text layer, setting the label to the rownames of the dataset mtcars, and the color to "red".
+ggplot(mtcars, aes(wt, mpg, color = fcyl)) +
+  # Add text layer with label rownames(mtcars) and color red
+  geom_text(label = rownames(mtcars), color = "red")
 
-# Code 2 ----
-# Change the color mapping to a fill mapping
-# Change the color mapping to a fill mapping. That is, fcyl should be mapped onto fill. Set the color of the points to my_blue, point size to 10 and the point shape to 1.
-
-# Change the color mapping to a fill mapping
-ggplot(mtcars, aes(wt, mpg, fill = fcyl)) +
-  # Set point color, size and shape
-  geom_point(color = my_blue, size = 10, shape = 1)
+# Code 3 ----
+# Add a point layer, setting the shape to 24 and the color to "yellow".
+ggplot(mtcars, aes(wt, mpg, color = fcyl)) +
+  # Add points layer with shape 24 and color yellow
+  geom_point(shape = 24, color = "yellow")
