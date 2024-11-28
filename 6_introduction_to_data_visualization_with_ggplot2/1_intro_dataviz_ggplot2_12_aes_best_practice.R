@@ -1,24 +1,38 @@
 # Introduction to Data Visualization with ggplot2 ----
 
-## using attributes----
+## aesthetic best practices ----
+# • Use your creative know-how, and
+# • Follow some clear guidelines
 
-# Restart Environment ----
-rm(list = ls())
+# Jacques Bertin
+# The Semiology of Graphics, 1967
 
-# Load library ----
-#install.packages("tidyverse")
-library(tidyverse)
-library(readr)
-library(ggplot2)
+# William Cleveland
+# The Elements of Graphing Data, 1985
+# Visualizing Data, 1993
 
-# Code ----
-# Plot 0 vs mpg
-ggplot(mtcars, aes(mpg, 0))+
-  geom_jitter() + # add position to jitter.
+# Form follows function
+#
+#       Explore                          Explain
+# Data <--------------------> Scientist <--------------------> Reader
+#       Confirm and Analyse              Inform and Presuade
 
-# Set the y-axis limits
-  ylim(-2, 2) # Set limits ylim(lo, hi) or ylim(c(lo, hi))
+# Function
+# Primary:
+# • Accurate and efficient representations
+# Secondary:
+# • Visually appealing, beautiful plots
 
-                
+# Guiding principles
+# Never:
+# • Misrepresent or obscure data
+# • Confuse viewers with complexity
+# Always:
+# • Consider the audience and purpose of every plot
 
+# The best choices for aesthetics
+# • Efficient
+#   ○ Provides a faster overview than numeric summaries
+# • Accurate
+#   ○ Minimize information loss
   
