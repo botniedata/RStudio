@@ -22,22 +22,22 @@ mtcars <- mtcars %>%
   mutate(fam = factor(am,
                       levels = c(0, 1),
                       labels = c(0, 1)))
-# Code #1 ----
-# Plot base
-plt_mpg_vs_fcyl_by_fam <- ggplot(mtcars,
-                                 aes(fcyl, mpg, color = fam))
 
-# Default points are show for comparison
-plt_mpg_vs_fcyl_by_fam + geom_point()
+# Plot #1 ----
+ggplot(iris, aes(Sepal.Length,
+                 Sepal.Width,
+                 color = Species)) +
+  # Swap for jitter layer with width 0.1
+  geom_jitter(alpha = 0.5,
+              width = 0.1)
 
-# Code #2 ----
-# Plot base
-plt_mpg_vs_fcyl_by_fam <- ggplot(mtcars, aes(fcyl, mpg, color = fam))
+# Plot #2 ----
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  # Set the position to jitter
+  geom_point(position = "jitter", alpha = 0.5)
 
-# Default points are shown for comparison
-plt_mpg_vs_fcyl_by_fam + geom_point()
+# Plot #3 ----
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  # Set the position to jitter
+  geom_point(alpha = 0.5, position = position_jitter(width = 0.1))
 
-# Alter the point positions by jittering, width 0.3
-plt_mpg_vs_fcyl_by_fam + geom_point(position = position_jitter(width = 0.3))
-
-# Code #3 ----
