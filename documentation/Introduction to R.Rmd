@@ -21,7 +21,7 @@ This is a convenient way to add explanations or notes to your code without affec
 Formatting and organizing code within the script and document by using multiple levels of headings (`#`, `##`, `###`, `####`), you can create a hierarchical structure that visually outlines different sections of your code. This can make it easier to navigate and understand, especially for larger or more complex projects.
 
 #### *Examples:*
-```{r}
+```{r comment}
 # This is a comment, Calculate the sum of 2 and 2
 2 + 2
 
@@ -41,7 +41,7 @@ R is a powerful tool for performing various mathematical calculations. It suppor
 - Modulo: `%%`
 
 #### *Examples:*
-```{r}
+```{r arithmetic-operators}
 
 # Multiplication
 # This is a comment, Calculate the product of 9 multiplied by 8
@@ -67,7 +67,7 @@ R is a powerful tool for performing various mathematical calculations. It suppor
 # Modulo
 # # This is a comment, Calculate the remainder after division
 # "28 modulo 6 is 4"
-28%%6 # 28/6 = 24 remainder and remainder 4 is the modulo
+28%%6 # 28 divided by 6 is equal to 24, and remainder 4 is the modulo
 ```
 
 ### **Variables**
@@ -75,7 +75,7 @@ Variable is a container that stores a value, variable can hold a variety of data
 `<-` assignment values using the assignment operator
 
 #### *Examples:*
-```{r}
+```{r variables}
 # Assign the value of 28 to x
 x <- 28
 
@@ -104,7 +104,7 @@ print(our_salary)
 R, a versatile programming language for statistical computing and data analysis, recognizes several fundamental data types. Understanding these data types is crucial for effective data manipulation and analysis. Here's a breakdown of the primary data types in R:
 
 #### *Examples:*
-```{r}
+```{r data-types}
 ## Numeric ----
 # Real numbers: Numbers with decimal points.
 x <- 3.14159
@@ -133,7 +133,7 @@ print(is_false)
 `class()` is a built-in function in R that is used to determine the data type of an object. It returns a character string specifying the class of the object.
 
 #### *Examples:*
-```{r}
+```{r class-function}
 class(x)
 class(y)
 class(text)
@@ -146,7 +146,7 @@ class(is_false)
 The `str()` function in R is a valuable tool for quickly inspecting the structure of an R object. It provides a concise summary of the object's type, dimensions, and a glimpse of its contents.
 
 #### *Examples:*
-```{r}
+```{r str-function}
 str(x)
 str(y)
 str(text)
