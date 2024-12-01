@@ -1,7 +1,7 @@
 ---
 title: "Introduction to R"
 author: "BotnieData"
-date: "2024-11-28"
+date: "`r format(Sys.time(), '%d %B %Y')`"
 output: html_document
 ---
 
@@ -9,6 +9,9 @@ output: html_document
 - Comment
 - Basic Arithmetic
 - Variable
+- Data types
+- `class()` function
+- `str()` function
 
 
 ### **Comment**
@@ -67,3 +70,87 @@ R is a powerful tool for performing various mathematical calculations. It suppor
 28%%6 # 28/6 = 24 remainder and remainder 4 is the modulo
 ```
 
+### **Variables**
+Variable is a container that stores a value, variable can hold a variety of data types such as numbers, text (strings), logical values (TRUE or FALSE) and others. <br>
+`<-` assignment values using the assignment operator
+
+#### *Examples:*
+```{r}
+# Assign the value of 28 to x
+x <- 28
+
+# Print out the value of the variable x
+x
+
+# Creating a variable named "age" and assigning the value of 38 to it
+age <- 38
+
+# Print out the value of the variable age using print built-in function
+print(age)
+
+### examples ----
+# Assign a value to the variables my_salary and your_salary
+my_salary <- 5000
+your_salary <- 4500
+
+# Add these two variables together
+our_salary <- my_salary + your_salary
+
+# Create the variable our_salary and print out
+print(our_salary)
+```
+
+### **Data Types**
+R, a versatile programming language for statistical computing and data analysis, recognizes several fundamental data types. Understanding these data types is crucial for effective data manipulation and analysis. Here's a breakdown of the primary data types in R:
+
+#### *Examples:*
+```{r}
+## Numeric ----
+# Real numbers: Numbers with decimal points.
+x <- 3.14159
+print(x)
+
+## Integers ----
+# Whole Numbers.
+y <- 42
+print(y)
+
+## Characters ----
+# Strings: Sequences of characters enclosed in quotes.
+text <- "Hello, world!"
+print(text)
+
+## Logical ----
+# Boolean values: TRUE or FALSE. Represents 1 is TRUE and 0 is FALSE
+is_true <- TRUE
+is_false <- FALSE
+
+print(is_true)
+print(is_false)
+```
+
+### **class() function**
+`class()` is a built-in function in R that is used to determine the data type of an object. It returns a character string specifying the class of the object.
+
+#### *Examples:*
+```{r}
+class(x)
+class(y)
+class(text)
+class(is_true)
+class(is_false)
+
+```
+
+### **str() function**
+The `str()` function in R is a valuable tool for quickly inspecting the structure of an R object. It provides a concise summary of the object's type, dimensions, and a glimpse of its contents.
+
+#### *Examples:*
+```{r}
+str(x)
+str(y)
+str(text)
+str(is_true)
+str(is_false)
+
+```

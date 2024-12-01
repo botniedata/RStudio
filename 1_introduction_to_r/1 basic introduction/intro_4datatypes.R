@@ -1,26 +1,21 @@
 # Introduction to R ----
 ## Data Types ----
 
-# R is a dynamically typed language, which means you don't need to explicitly declare the data type of a variable before assigning a value to it. R automatically determines the data type based on the value you assign.
+# R, a versatile programming language for statistical computing and data analysis, recognizes several fundamental data types. Understanding these data types is crucial for effective data manipulation and analysis. Here's a breakdown of the primary data types in R:
 
-### Numeric ----
-# • Integer: Whole numbers (1, 2, -3)
-# • Double: Floating-point numbers (3.14, -0.25)
+## Numeric ----
+# Real numbers: Numbers with decimal points.
+x <- 3.14159
 
-### Characters ----
-# • String of text ("Hello", "Mabuhay Philippines")
+## Integers ----
+# Whole Numbers.
+y <- 42
 
-### Logical ----
-# • Boolean values (TRUE, FALSE)
+## Characters ----
+# Strings: Sequences of characters enclosed in quotes.
+text <- "Hello, world!"
 
-# For restarting environment
-rm(list = ls())
-
-# Assign my_number to be 10
-my_number <- 10
-
-# Assign my_character to be "Hello World"
-my_character <- "Hello World"
-
-# Assign my_logical to be FALSE
-my_logical <- FALSE
+## Logical ----
+# Boolean values: TRUE or FALSE.
+is_true <- TRUE
+is_false <- FALSE
