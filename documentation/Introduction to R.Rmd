@@ -5,11 +5,65 @@ date: "2024-11-28"
 output: html_document
 ---
 
+### Topics
+- Comment
+- Basic Arithmetic
+- Variable
 
 
-## Topics
-• Comment
+### **Comment**
+`#` symbol is used to start a comment. Any text following # on the same line will be ignored by the R interpreter. 
+This is a convenient way to add explanations or notes to your code without affecting its execution.
+
+Formatting and organizing code within the script and document by using multiple levels of headings (`#`, `##`, `###`, `####`), you can create a hierarchical structure that visually outlines different sections of your code. This can make it easier to navigate and understand, especially for larger or more complex projects.
+
+#### *Examples:*
 ```{r}
-# Sum of 2 numbers
+# This is a comment, Calculate the sum of 2 and 2
 2 + 2
+
+# This is a comment, Calculate the difference of 27 subtracted by 10
+27 - 10
 ```
+
+### **Basic Arithmetic**
+R is a powerful tool for performing various mathematical calculations. It supports a wide range of arithmetic operations, including:
+
+#### **Arithmetic Operators**
+- Multiplication: `*`
+- Division: `/`
+- Addition: `+`
+- Subtraction: `-`
+- Exponentiation: `^`
+- Modulo: `%%`
+
+#### *Examples:*
+```{r}
+
+# Multiplication
+# This is a comment, Calculate the product of 9 multiplied by 8
+9 * 8
+
+# Division
+# This is a comment, Calculate the quotient of 6 divided by 2
+6 / 2
+
+# Addition
+# This is a comment, Calculate the sum of 1 and 1
+1 + 1
+
+# Subtraction
+# This is a comment, Calculate the difference of 27 subtracted by 10
+27 - 10
+
+# Exponential
+# # This is a comment, Calculate 'yth power of x', so called 
+# "The 5th power of 2 is 32"
+2^5 # (2 * 2 * 2 * 2 * 2)
+
+# Modulo
+# # This is a comment, Calculate the remainder after division
+# "28 modulo 6 is 4"
+28%%6 # 28/6 = 24 remainder and remainder 4 is the modulo
+```
+
