@@ -418,8 +418,8 @@ print(finger_number)</code></pre>
 <pre><code>##  Thumb  Index Middle   Ring  Pinky 
 ##      1      2      3      4      5</code></pre>
 </div>
-<div id="calculate-vectors" class="section level3">
-<h3>Calculate vectors</h3>
+<div id="calculate-vectors-using-mathematical-operators" class="section level3">
+<h3>Calculate vectors using Mathematical operators</h3>
 <pre class="r"><code># Create a vector of sales_burger
 sales_burger &lt;- c(100, 250, 75, 15, 20, 120, 150)
 
@@ -428,7 +428,6 @@ sales_lemonade &lt;- c(20, 30, 10, 25, 20, 50, 70)
 
 # Calculate the sum of sales_burger and sales_lemonade
 total_sales &lt;- sales_burger + sales_lemonade
-
 # Create a vector of days
 days_vector &lt;- c(&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;, &quot;Sunday&quot;)
 
@@ -439,6 +438,42 @@ names(total_sales) &lt;- days_vector
 print(total_sales)</code></pre>
 <pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
 ##       120       280        85        40        40       170       220</code></pre>
+</div>
+<div id="calculate-vectors-using-sum-function" class="section level3">
+<h3>Calculate vectors using sum() function</h3>
+<pre class="r"><code># Create a vector of sales_burger
+sales_burger &lt;- c(100, 250, 75, 15, 20, 120, 150)
+names(sales_burger) &lt;- days_vector
+print(sales_burger)</code></pre>
+<pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
+##       100       250        75        15        20       120       150</code></pre>
+<pre class="r"><code># Create a vector of sales_lemonade
+sales_lemonade &lt;- c(20, 30, 10, 25, 20, 50, 70)
+names(sales_lemonade) &lt;- days_vector
+print(sales_lemonade)</code></pre>
+<pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
+##        20        30        10        25        20        50        70</code></pre>
+<pre class="r"><code># Create a vector of days
+days_vector &lt;- c(&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;, &quot;Sunday&quot;)
+
+# Total sales per day
+sales_per_day &lt;- sales_burger + sales_lemonade
+print(sales_per_day)</code></pre>
+<pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
+##       120       280        85        40        40       170       220</code></pre>
+<pre class="r"><code># Calculate the sum of sales_burger and sales_lemonade
+sum_sales_burger &lt;- sum(sales_burger)
+print(sum_sales_burger)</code></pre>
+<pre><code>## [1] 730</code></pre>
+<pre class="r"><code>sum_sales_lemonade &lt;- sum(sales_lemonade)
+print(sum_sales_lemonade)</code></pre>
+<pre><code>## [1] 225</code></pre>
+<pre class="r"><code># Calculate the total_sales_in_a_week
+total_sales &lt;- sum(sum_sales_burger, sum_sales_lemonade)
+
+# Print the total_sales with days_vector
+print(total_sales)</code></pre>
+<pre><code>## [1] 955</code></pre>
 </div>
 
 

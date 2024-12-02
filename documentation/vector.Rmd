@@ -59,7 +59,7 @@ names(finger_number) <- fingers_names
 print(finger_number)
 ```
 
-### Calculate vectors
+### Calculate vectors using Mathematical operators
 ```{r}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
@@ -69,7 +69,6 @@ sales_lemonade <- c(20, 30, 10, 25, 20, 50, 70)
 
 # Calculate the sum of sales_burger and sales_lemonade
 total_sales <- sales_burger + sales_lemonade
-
 # Create a vector of days
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 
@@ -79,4 +78,37 @@ names(total_sales) <- days_vector
 # Print the total_sales with days_vector
 print(total_sales)
 
+```
+
+### Calculate vectors using sum() function
+```{r}
+# Create a vector of sales_burger
+sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
+names(sales_burger) <- days_vector
+print(sales_burger)
+
+# Create a vector of sales_lemonade
+sales_lemonade <- c(20, 30, 10, 25, 20, 50, 70)
+names(sales_lemonade) <- days_vector
+print(sales_lemonade)
+
+# Create a vector of days
+days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+# Total sales per day
+sales_per_day <- sales_burger + sales_lemonade
+print(sales_per_day)
+
+# Calculate the sum of sales_burger and sales_lemonade
+sum_sales_burger <- sum(sales_burger)
+print(sum_sales_burger)
+
+sum_sales_lemonade <- sum(sales_lemonade)
+print(sum_sales_lemonade)
+
+# Calculate the total_sales_in_a_week
+total_sales <- sum(sum_sales_burger, sum_sales_lemonade)
+
+# Print the total_sales with days_vector
+print(total_sales)
 ```
