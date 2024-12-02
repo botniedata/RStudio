@@ -357,189 +357,88 @@ display: none;
 </div>
 
 
-<div id="topics" class="section level3">
-<h3>Topics</h3>
-<ul>
-<li>Comment</li>
-<li>Basic Arithmetic</li>
-<li>Variable</li>
-<li>Data types</li>
-<li><code>class()</code> function</li>
-<li><code>str()</code> function</li>
-</ul>
+<div id="vector" class="section level3">
+<h3>Vector</h3>
+<p>Vectors are one of the most fundamental data structures in R. They
+are essentially ordered collections of elements, where all elements must
+be of the same data type.<br> In R, the <code>c()</code> function is a
+fundamental tool used to combine values into a vector. A vector is a
+one-dimensional array that can hold elements of the same data type.</p>
+<pre class="r"><code># Declared variable of different types using vector
+my_number &lt;- c(1, 10, 15)
+print(my_number)</code></pre>
+<pre><code>## [1]  1 10 15</code></pre>
+<pre class="r"><code>my_character &lt;- c(&quot;z&quot;, &quot;x&quot;, &quot;y&quot;)
+print(my_character, str(my_character))</code></pre>
+<pre><code>##  chr [1:3] &quot;z&quot; &quot;x&quot; &quot;y&quot;
+## [1] &quot;z&quot; &quot;x&quot; &quot;y&quot;</code></pre>
+<pre class="r"><code>my_logical &lt;- c(FALSE, TRUE, FALSE)
+print(my_logical)</code></pre>
+<pre><code>## [1] FALSE  TRUE FALSE</code></pre>
 </div>
-<div id="comment" class="section level3">
-<h3><strong>Comment</strong></h3>
-<p><code>#</code> symbol is used to start a comment. Any text following
-# on the same line will be ignored by the R interpreter. This is a
-convenient way to add explanations or notes to your code without
-affecting its execution.</p>
-<p>Formatting and organizing code within the script and document by
-using multiple levels of headings (<code>#</code>, <code>##</code>,
-<code>###</code>, <code>####</code>), you can create a hierarchical
-structure that visually outlines different sections of your code. This
-can make it easier to navigate and understand, especially for larger or
-more complex projects.</p>
-<div id="examples" class="section level4">
-<h4><em>Examples:</em></h4>
-<pre class="r"><code># This is a comment, Calculate the sum of 2 and 2
-2 + 2</code></pre>
-<pre><code>## [1] 4</code></pre>
-<pre class="r"><code># This is a comment, Calculate the difference of 27 subtracted by 10
-27 - 10</code></pre>
-<pre><code>## [1] 17</code></pre>
-</div>
-</div>
-<div id="basic-arithmetic" class="section level3">
-<h3><strong>Basic Arithmetic</strong></h3>
-<p>R is a powerful tool for performing various mathematical
-calculations. It supports a wide range of arithmetic operations,
-including:</p>
-<div id="arithmetic-operators" class="section level4">
-<h4><strong>Arithmetic Operators</strong></h4>
-<ul>
-<li>Multiplication: <code>*</code></li>
-<li>Division: <code>/</code></li>
-<li>Addition: <code>+</code></li>
-<li>Subtraction: <code>-</code></li>
-<li>Exponentiation: <code>^</code></li>
-<li>Modulo: <code>%%</code></li>
-</ul>
-</div>
-<div id="examples-1" class="section level4">
-<h4><em>Examples:</em></h4>
-<pre class="r"><code># Multiplication
-# This is a comment, Calculate the product of 9 multiplied by 8
-9 * 8</code></pre>
-<pre><code>## [1] 72</code></pre>
-<pre class="r"><code># Division
-# This is a comment, Calculate the quotient of 6 divided by 2
-6 / 2</code></pre>
-<pre><code>## [1] 3</code></pre>
-<pre class="r"><code># Addition
-# This is a comment, Calculate the sum of 1 and 1
-1 + 1</code></pre>
-<pre><code>## [1] 2</code></pre>
-<pre class="r"><code># Subtraction
-# This is a comment, Calculate the difference of 27 subtracted by 10
-27 - 10</code></pre>
-<pre><code>## [1] 17</code></pre>
-<pre class="r"><code># Exponential
-# # This is a comment, Calculate &#39;yth power of x&#39;, so called 
-# &quot;The 5th power of 2 is 32&quot;
-2^5 # (2 * 2 * 2 * 2 * 2)</code></pre>
-<pre><code>## [1] 32</code></pre>
-<pre class="r"><code># Modulo
-# # This is a comment, Calculate the remainder after division
-# &quot;28 modulo 6 is 4&quot;
-28%%6 # 28 divided by 6 is equal to 24, and remainder 4 is the modulo</code></pre>
-<pre><code>## [1] 4</code></pre>
-</div>
-</div>
-<div id="variables" class="section level3">
-<h3><strong>Variables</strong></h3>
-<p>Variable is a container that stores a value, variable can hold a
-variety of data types such as numbers, text (strings), logical values
-(TRUE or FALSE) and others. <br> <code>&lt;-</code> assignment values
-using the assignment operator</p>
-<div id="examples-2" class="section level4">
-<h4><em>Examples:</em></h4>
-<pre class="r"><code># Assign the value of 28 to x
-x &lt;- 28
+<div id="names" class="section level3">
+<h3>Names</h3>
+<p>The <code>names()</code> function is used to get or set the names of
+elements within an object, such as a vector, list, or data frame.</p>
+<div id="setting-names" class="section level4">
+<h4>Setting Names</h4>
+<p>To assign names to an object, you use the assignment operator
+<code>&lt;-</code> with the <code>names()</code> function:</p>
+<pre class="r"><code># Unnamed vector as daily_sales
+daily_sales &lt;- c(100, 250, 75, 15, 20, 90, 120)
 
-# Print out the value of the variable x
-x</code></pre>
-<pre><code>## [1] 28</code></pre>
-<pre class="r"><code># Creating a variable named &quot;age&quot; and assigning the value of 38 to it
-age &lt;- 38
+# Assign names Monday to Sunday to unnamed vector daily_sales
+names(daily_sales) &lt;- c(&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;, &quot;Sunday&quot;)
 
-# Print out the value of the variable age using print built-in function
-print(age)</code></pre>
-<pre><code>## [1] 38</code></pre>
-<pre class="r"><code>### examples ----
-# Assign a value to the variables my_salary and your_salary
-my_salary &lt;- 5000
-your_salary &lt;- 4500
+# Print result
+print(daily_sales)</code></pre>
+<pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
+##       100       250        75        15        20        90       120</code></pre>
+</div>
+</div>
+<div id="getting-names" class="section level3">
+<h3>Getting Names</h3>
+<p>To retrieve the names of an object, you simply use the
+<code>names()</code> function:</p>
+<pre class="r"><code>names(daily_sales)</code></pre>
+<pre><code>## [1] &quot;Monday&quot;    &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;    &quot;Saturday&quot; 
+## [7] &quot;Sunday&quot;</code></pre>
+</div>
+<div id="setting-names-using-variables" class="section level3">
+<h3>Setting names using variables</h3>
+<pre class="r"><code># Number of fingers in sequence
+finger_number &lt;- c(1, 2, 3, 4, 5)
+# Names of fingers from Thumb to Pinky
+fingers_names &lt;- c(&quot;Thumb&quot;, &quot;Index&quot;, &quot;Middle&quot;, &quot;Ring&quot;, &quot;Pinky&quot;)
 
-# Add these two variables together
-our_salary &lt;- my_salary + your_salary
+# Assign finger_numbers to finger_names
+names(finger_number) &lt;- fingers_names
 
-# Create the variable our_salary and print out
-print(our_salary)</code></pre>
-<pre><code>## [1] 9500</code></pre>
+print(finger_number)</code></pre>
+<pre><code>##  Thumb  Index Middle   Ring  Pinky 
+##      1      2      3      4      5</code></pre>
 </div>
-</div>
-<div id="data-types" class="section level3">
-<h3><strong>Data Types</strong></h3>
-<p>R, a versatile programming language for statistical computing and
-data analysis, recognizes several fundamental data types. Understanding
-these data types is crucial for effective data manipulation and
-analysis. Here’s a breakdown of the primary data types in R:</p>
-<div id="examples-3" class="section level4">
-<h4><em>Examples:</em></h4>
-<pre class="r"><code>## Numeric ----
-# Real numbers: Numbers with decimal points.
-x &lt;- 3.14159
-print(x)</code></pre>
-<pre><code>## [1] 3.14159</code></pre>
-<pre class="r"><code>## Integers ----
-# Whole Numbers.
-y &lt;- 42
-print(y)</code></pre>
-<pre><code>## [1] 42</code></pre>
-<pre class="r"><code>## Characters ----
-# Strings: Sequences of characters enclosed in quotes.
-text &lt;- &quot;Hello, world!&quot;
-print(text)</code></pre>
-<pre><code>## [1] &quot;Hello, world!&quot;</code></pre>
-<pre class="r"><code>## Logical ----
-# Boolean values: TRUE or FALSE. Represents 1 is TRUE and 0 is FALSE
-is_true &lt;- TRUE
-is_false &lt;- FALSE
+<div id="calculate-vectors" class="section level3">
+<h3>Calculate vectors</h3>
+<pre class="r"><code># Create a vector of sales_burger
+sales_burger &lt;- c(100, 250, 75, 15, 20, 120, 150)
 
-print(is_true)</code></pre>
-<pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code>print(is_false)</code></pre>
-<pre><code>## [1] FALSE</code></pre>
-</div>
-</div>
-<div id="class-function" class="section level3">
-<h3><strong>class() function</strong></h3>
-<p><code>class()</code> is a built-in function in R that is used to
-determine the data type of an object. It returns a character string
-specifying the class of the object.</p>
-<div id="examples-4" class="section level4">
-<h4><em>Examples:</em></h4>
-<pre class="r"><code>class(x)</code></pre>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<pre class="r"><code>class(y)</code></pre>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<pre class="r"><code>class(text)</code></pre>
-<pre><code>## [1] &quot;character&quot;</code></pre>
-<pre class="r"><code>class(is_true)</code></pre>
-<pre><code>## [1] &quot;logical&quot;</code></pre>
-<pre class="r"><code>class(is_false)</code></pre>
-<pre><code>## [1] &quot;logical&quot;</code></pre>
-</div>
-</div>
-<div id="str-function" class="section level3">
-<h3><strong>str() function</strong></h3>
-<p>The <code>str()</code> function in R is a valuable tool for quickly
-inspecting the structure of an R object. It provides a concise summary
-of the object’s type, dimensions, and a glimpse of its contents.</p>
-<div id="examples-5" class="section level4">
-<h4><em>Examples:</em></h4>
-<pre class="r"><code>str(x)</code></pre>
-<pre><code>##  num 3.14</code></pre>
-<pre class="r"><code>str(y)</code></pre>
-<pre><code>##  num 42</code></pre>
-<pre class="r"><code>str(text)</code></pre>
-<pre><code>##  chr &quot;Hello, world!&quot;</code></pre>
-<pre class="r"><code>str(is_true)</code></pre>
-<pre><code>##  logi TRUE</code></pre>
-<pre class="r"><code>str(is_false)</code></pre>
-<pre><code>##  logi FALSE</code></pre>
-</div>
+# Create a vector of sales_lemonade
+sales_lemonade &lt;- c(20, 30, 10, 25, 20, 50, 70)
+
+# Calculate the sum of sales_burger and sales_lemonade
+total_sales &lt;- sales_burger + sales_lemonade
+
+# Create a vector of days
+days_vector &lt;- c(&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;, &quot;Sunday&quot;)
+
+# Assign names
+names(total_sales) &lt;- days_vector
+
+# Print the total_sales with days_vector
+print(total_sales)</code></pre>
+<pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
+##       120       280        85        40        40       170       220</code></pre>
 </div>
 
 

@@ -7,10 +7,10 @@
 rm(list = ls())
 
 # Sales Burger from Monday to Friday
-sales_burger <- c(100, 250, 75, 15, 20)
+sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
 
 # Sales Lemonade from Monday to Friday
-sales_lemonade <- c(20, 30, 10, 25, 20)
+sales_lemonade <- c(20, 30, 10, 25, 20, 50, 70)
 
 # The sum of sales_burger and sales_lemonade vectors
 total_sales <- sales_burger + sales_lemonade

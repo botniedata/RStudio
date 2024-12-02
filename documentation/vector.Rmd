@@ -1,0 +1,82 @@
+---
+title: "Introduction to R"
+author: "BotnieData"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_document
+---
+
+### Vector
+Vectors are one of the most fundamental data structures in R.
+They are essentially ordered collections of elements, where all elements must be of the same data type.<br>
+In R, the `c()` function is a fundamental tool used to combine values into a vector. A vector is a one-dimensional array that can hold elements of the same data type.
+
+```{r}
+# Declared variable of different types using vector
+my_number <- c(1, 10, 15)
+print(my_number)
+
+my_character <- c("z", "x", "y")
+print(my_character, str(my_character))
+
+my_logical <- c(FALSE, TRUE, FALSE)
+print(my_logical)
+```
+
+### Names
+The `names()` function is used to get or set the names of elements within an object, such as a vector, list, or data frame.
+
+#### Setting Names
+To assign names to an object, you use the assignment operator `<-` with the `names()` function:
+
+```{r}
+# Unnamed vector as daily_sales
+daily_sales <- c(100, 250, 75, 15, 20, 90, 120)
+
+# Assign names Monday to Sunday to unnamed vector daily_sales
+names(daily_sales) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+# Print result
+print(daily_sales)
+```
+
+### Getting Names
+To retrieve the names of an object, you simply use the `names()` function:
+
+```{r}
+names(daily_sales)
+```
+
+### Setting names using variables
+```{r}
+# Number of fingers in sequence
+finger_number <- c(1, 2, 3, 4, 5)
+# Names of fingers from Thumb to Pinky
+fingers_names <- c("Thumb", "Index", "Middle", "Ring", "Pinky")
+
+# Assign finger_numbers to finger_names
+names(finger_number) <- fingers_names
+
+print(finger_number)
+```
+
+### Calculate vectors
+```{r}
+# Create a vector of sales_burger
+sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
+
+# Create a vector of sales_lemonade
+sales_lemonade <- c(20, 30, 10, 25, 20, 50, 70)
+
+# Calculate the sum of sales_burger and sales_lemonade
+total_sales <- sales_burger + sales_lemonade
+
+# Create a vector of days
+days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+# Assign names
+names(total_sales) <- days_vector
+
+# Print the total_sales with days_vector
+print(total_sales)
+
+```
