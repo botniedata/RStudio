@@ -39,6 +39,8 @@ my_logical <- c(FALSE, TRUE, FALSE)
 print(my_logical)
 ```
 
+---
+
 ### Names
 The `names()` function is used to get or set the names of elements within an object, such as a vector, list, or data frame.
 
@@ -89,6 +91,8 @@ names(finger_number) <- fingers_names
 
 print(finger_number)
 ```
+
+---
 
 ### Vectors with Math Operator
 ```{r}
@@ -164,7 +168,11 @@ result <- vector1 == vector2
 print(result)
 ```
 
+---
+
 ### Selection
+
+#### Selection on single element
 In R, the square bracket [] operator is a versatile tool for selecting elements from various data structures, including vectors, matrices, data frames, and lists.
 ```{r}
 # Create a vector of sales_burger
@@ -181,6 +189,7 @@ print(sales_lemonade)
 days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 
 # Define a new variable based on a selection
+# Selection of single element under Tuesday
 burger_tuesday <- sales_burger[2]
 lemonade_tuesday <- sales_lemonade[2]
 
@@ -190,3 +199,84 @@ print(lemonade_tuesday)
 
 ```
 
+---
+
+#### Selection containing elements
+In R, square brackets [] are used to access elements or subsets of objects
+
+```{r}
+# Create a vector of sales_burger
+sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
+names(sales_burger) <- days_vector
+
+# Create a vector of sales_lemonade
+sales_lemonade <- c(20, 30, 10, 25, 20, 50, 70)
+names(sales_lemonade) <- days_vector
+
+# Assign variable of days_vector
+days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+# Define a new variable based on a selection elements (first, mid and last day of the weekdays)
+fml_burger <- sales_burger[c(1, 3, 5)]
+fml_lemonade <- sales_lemonade[c(1, 3, 5)]
+
+# Print out fml_burger (first, mid and last day of the weekday)
+print(fml_burger)
+
+# Print out fml_lemonade (first, mid and last day of the weekday)
+print(fml_lemonade)
+```
+
+---
+
+#### Selection range elements
+```{r}
+# Create a vector of sales_burger
+sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
+names(sales_burger) <- days_vector
+
+# Create a vector of sales_lemonade
+sales_lemonade <- c(20, 30, 10, 25, 20, 50, 70)
+names(sales_lemonade) <- days_vector
+
+# Assign variable of days_vector
+days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+# Define a new variable based on a selection from 1st to 4th element
+mth_burger <- sales_burger[1:4]
+mth_lemonade <- sales_lemonade[1:4]
+
+# Select the 1st and 4th element on mth_burger
+print(mth_burger)
+
+# Select the 1st and 4th element on mth_lemonade
+print(mth_lemonade)
+```
+
+---
+
+#### Selection range with calculation
+```{r}
+# Create a vector of sales_burger
+sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
+names(sales_burger) <- days_vector
+
+# Create a vector of sales_lemonade
+sales_lemonade <- c(20, 30, 10, 25, 20, 50, 70)
+names(sales_lemonade) <- days_vector
+
+# Assign variable of days_vector
+days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+# Define a new variable based on a selection from Weekdays
+weekdays_avg_sales_burger <- sales_burger[1:5]
+weekdays_avg_sales_lemonade <- sales_lemonade[1:5]
+
+# Calculate the average sales of burgers from Weekdays
+avg_sales_burger <- mean(weekdays_avg_sales_burger)
+print(avg_sales_burger)
+
+# Calculate the average sales of lemonade from Weekdays
+avg_sales_lemonade <- mean(weekdays_avg_sales_lemonade)
+print(avg_sales_lemonade)
+```
