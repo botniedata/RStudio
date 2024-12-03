@@ -1739,9 +1739,8 @@ print(result)</code></pre>
 <h3>Selection</h3>
 <div id="selection-on-single-element" class="section level4">
 <h4>Selection on single element</h4>
-<p>In R, the square bracket [] operator is a versatile tool for
-selecting elements from various data structures, including vectors,
-matrices, data frames, and lists.</p>
+<p>Selects the second elements from each vector, which corresponds to
+Tuesday’s sales for burger and lemonade, respectively.</p>
 <pre class="r"><code># Create a vector of sales_burger
 sales_burger &lt;- c(100, 250, 75, 15, 20, 120, 150)
 names(sales_burger) &lt;- days_vector
@@ -1773,8 +1772,9 @@ print(burger_tuesday)</code></pre>
 </div>
 <div id="selection-containing-elements" class="section level4">
 <h4>Selection containing elements</h4>
-<p>In R, square brackets [] are used to access elements or subsets of
-objects</p>
+<p>Selects the first, third and fifth elements from both vectors, which
+correspond to Monday, Wednesday and Friday’s sales for each vector
+respectively.</p>
 <pre class="r"><code># Create a vector of sales_burger
 sales_burger &lt;- c(100, 250, 75, 15, 20, 120, 150)
 names(sales_burger) &lt;- days_vector
@@ -1802,6 +1802,8 @@ print(fml_lemonade)</code></pre>
 </div>
 <div id="selection-range-elements" class="section level4">
 <h4>Selection range elements</h4>
+<p>Select the first and fourth elements of vector which correspond to
+Monday to Thursday’s Burget and Lemonade Sales</p>
 <pre class="r"><code># Create a vector of sales_burger
 sales_burger &lt;- c(100, 250, 75, 15, 20, 120, 150)
 names(sales_burger) &lt;- days_vector
@@ -1829,6 +1831,7 @@ print(mth_lemonade)</code></pre>
 </div>
 <div id="selection-range-with-calculation" class="section level4">
 <h4>Selection range with calculation</h4>
+<p>Calculating Average Weekday Burger and Lemonade Sales</p>
 <pre class="r"><code># Create a vector of sales_burger
 sales_burger &lt;- c(100, 250, 75, 15, 20, 120, 150)
 names(sales_burger) &lt;- days_vector

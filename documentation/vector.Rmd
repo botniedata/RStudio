@@ -173,7 +173,7 @@ print(result)
 ### Selection
 
 #### Selection on single element
-In R, the square bracket [] operator is a versatile tool for selecting elements from various data structures, including vectors, matrices, data frames, and lists.
+Selects the second elements from each vector, which corresponds to Tuesday's sales for burger and lemonade, respectively.
 ```{r}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
@@ -202,8 +202,7 @@ print(lemonade_tuesday)
 ---
 
 #### Selection containing elements
-In R, square brackets [] are used to access elements or subsets of objects
-
+Selects the first, third and fifth elements from both vectors, which correspond to Monday, Wednesday and Friday's sales for each vector respectively.
 ```{r}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
@@ -230,6 +229,7 @@ print(fml_lemonade)
 ---
 
 #### Selection range elements
+Select the first and fourth elements of vector which correspond to Monday to Thursday's Burget and Lemonade Sales
 ```{r}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
@@ -256,6 +256,7 @@ print(mth_lemonade)
 ---
 
 #### Selection range with calculation
+Calculating Average Weekday Burger and Lemonade Sales
 ```{r}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
