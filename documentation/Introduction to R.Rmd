@@ -2,10 +2,17 @@
 title: "Introduction to R"
 author: "BotnieData"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      toc_collapsed: true
+    toc_depth: 4
+    number_sections: false
+    theme: cerulean
 ---
 
-### Topics
+## **Topics**
 - Comment
 - Basic Arithmetic
 - Variable
@@ -13,6 +20,7 @@ output: html_document
 - `class()` function
 - `str()` function
 
+---
 
 ### **Comment**
 `#` symbol is used to start a comment. Any text following # on the same line will be ignored by the R interpreter. 
@@ -20,7 +28,7 @@ This is a convenient way to add explanations or notes to your code without affec
 
 Formatting and organizing code within the script and document by using multiple levels of headings (`#`, `##`, `###`, `####`), you can create a hierarchical structure that visually outlines different sections of your code. This can make it easier to navigate and understand, especially for larger or more complex projects.
 
-#### *Examples:*
+*Examples:*
 ```{r comment}
 # This is a comment, Calculate the sum of 2 and 2
 2 + 2
@@ -28,6 +36,8 @@ Formatting and organizing code within the script and document by using multiple 
 # This is a comment, Calculate the difference of 27 subtracted by 10
 27 - 10
 ```
+
+---
 
 ### **Basic Arithmetic**
 R is a powerful tool for performing various mathematical calculations. It supports a wide range of arithmetic operations, including:
@@ -40,7 +50,7 @@ R is a powerful tool for performing various mathematical calculations. It suppor
 - Exponentiation: `^`
 - Modulo: `%%`
 
-#### *Examples:*
+*Examples:*
 ```{r arithmetic-operators}
 
 # Multiplication
@@ -70,11 +80,13 @@ R is a powerful tool for performing various mathematical calculations. It suppor
 28%%6 # 28 divided by 6 is equal to 24, and remainder 4 is the modulo
 ```
 
+---
+
 ### **Variables**
 Variable is a container that stores a value, variable can hold a variety of data types such as numbers, text (strings), logical values (TRUE or FALSE) and others. <br>
 `<-` assignment values using the assignment operator
 
-#### *Examples:*
+*Examples:*
 ```{r variables}
 # Assign the value of 28 to x
 x <- 28
@@ -100,10 +112,12 @@ our_salary <- my_salary + your_salary
 print(our_salary)
 ```
 
+---
+
 ### **Data Types**
 R, a versatile programming language for statistical computing and data analysis, recognizes several fundamental data types. Understanding these data types is crucial for effective data manipulation and analysis. Here's a breakdown of the primary data types in R:
 
-#### *Examples:*
+*Examples:*
 ```{r data-types}
 ## Numeric ----
 # Real numbers: Numbers with decimal points.
@@ -129,10 +143,12 @@ print(is_true)
 print(is_false)
 ```
 
+---
+
 ### **class() function**
 `class()` is a built-in function in R that is used to determine the data type of an object. It returns a character string specifying the class of the object.
 
-#### *Examples:*
+*Examples:*
 ```{r class-function}
 class(x)
 class(y)
@@ -142,10 +158,12 @@ class(is_false)
 
 ```
 
+---
+
 ### **str() function**
 The `str()` function in R is a valuable tool for quickly inspecting the structure of an R object. It provides a concise summary of the object's type, dimensions, and a glimpse of its contents.
 
-#### *Examples:*
+*Examples:*
 ```{r str-function}
 str(x)
 str(y)

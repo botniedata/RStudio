@@ -2,10 +2,17 @@
 title: "Introduction to R"
 author: "BotnieData"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      toc_collapsed: true
+    toc_depth: 4
+    number_sections: false
+    theme: cerulean
 ---
 
-### Vector
+### What is vector?
 Vectors are one of the most fundamental data structures in R.
 They are essentially ordered collections of elements, where all elements must be of the same data type.<br>
 In R, the `c()` function is a fundamental tool used to combine values into a vector. A vector is a one-dimensional array that can hold elements of the same data type.
@@ -22,14 +29,14 @@ my_logical <- c(FALSE, TRUE, FALSE)
 print(my_logical)
 ```
 
-### Names
+### Names ----
 The `names()` function is used to get or set the names of elements within an object, such as a vector, list, or data frame.
 
 #### Setting Names
 To assign names to an object, you use the assignment operator `<-` with the `names()` function:
 
 ```{r}
-# Unnamed vector as daily_sales
+# Unnamed vector as daily_sales_2
 daily_sales <- c(100, 250, 75, 15, 20, 90, 120)
 
 # Assign names Monday to Sunday to unnamed vector daily_sales
@@ -38,8 +45,20 @@ names(daily_sales) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 # Print result
 print(daily_sales)
 ```
+You can also assign names directly when creating a vector using `=` (equal) sign
+```{r}
 
-### Getting Names
+# Unnamed vector as daily_sales
+daily_sales_2 <- c("Monday" = 100, "Tuesday" = 250, "Wednesday" = 75, "Thursday" = 15, "Friday" = 20, "Saturday" = 90, "Sunday" = 120)
+
+# Print result
+print(daily_sales_2)
+
+```
+Using `=` equal sign assigning the variable
+
+
+#### Getting Names
 To retrieve the names of an object, you simply use the `names()` function:
 
 ```{r}
@@ -59,7 +78,7 @@ names(finger_number) <- fingers_names
 print(finger_number)
 ```
 
-### Calculate vectors using Mathematical operators
+### Vectors with Math Operator
 ```{r}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
@@ -80,7 +99,7 @@ print(total_sales)
 
 ```
 
-### Calculate vectors using sum() function
+### Vector using `sum()` function
 ```{r}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
