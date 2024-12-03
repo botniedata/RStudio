@@ -1277,6 +1277,83 @@ window.buildTabsets = function(tocID) {
 };
 
 </script>
+<script>
+window.initializeCodeFolding = function(show) {
+
+  // handlers for show-all and hide all
+  $("#rmd-show-all-code").click(function() {
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('show');
+    });
+  });
+  $("#rmd-hide-all-code").click(function() {
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('hide');
+    });
+  });
+
+  // index for unique code element ids
+  var currentIndex = 1;
+
+  // select all R code blocks
+  var rCodeBlocks = $('pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan, pre.julia, pre.foldable');
+  rCodeBlocks.each(function() {
+    // skip if the block has fold-none class
+    if ($(this).hasClass('fold-none')) return;
+
+    // create a collapsable div to wrap the code in
+    var div = $('<div class="collapse r-code-collapse"></div>');
+    var showThis = (show || $(this).hasClass('fold-show')) && !$(this).hasClass('fold-hide');
+    var id = 'rcode-643E0F36' + currentIndex++;
+    div.attr('id', id);
+    $(this).before(div);
+    $(this).detach().appendTo(div);
+
+    // add a show code button right above
+    var showCodeText = $('<span>' + (showThis ? 'Hide' : 'Show') + '</span>');
+    var showCodeButton = $('<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm code-folding-btn pull-right float-right"></button>');
+    showCodeButton.append(showCodeText);
+    showCodeButton
+        .attr('data-toggle', 'collapse')
+        .attr('data-bs-toggle', 'collapse') // BS5
+        .attr('data-target', '#' + id)
+        .attr('data-bs-target', '#' + id)   // BS5
+        .attr('aria-expanded', showThis)
+        .attr('aria-controls', id);
+
+    var buttonRow = $('<div class="row"></div>');
+    var buttonCol = $('<div class="col-md-12"></div>');
+
+    buttonCol.append(showCodeButton);
+    buttonRow.append(buttonCol);
+
+    div.before(buttonRow);
+
+    // show the div if necessary
+    if (showThis) div.collapse('show');
+
+    // update state of button on show/hide
+    //   * Change text
+    //   * add a class for intermediate states styling
+    div.on('hide.bs.collapse', function () {
+      showCodeText.text('Show');
+      showCodeButton.addClass('btn-collapsing');
+    });
+    div.on('hidden.bs.collapse', function () {
+      showCodeButton.removeClass('btn-collapsing');
+    });
+    div.on('show.bs.collapse', function () {
+      showCodeText.text('Hide');
+      showCodeButton.addClass('btn-expanding');
+    });
+    div.on('shown.bs.collapse', function () {
+      showCodeButton.removeClass('btn-expanding');
+    });
+
+  });
+
+}
+</script>
 <style type="text/css">.hljs-literal {
 color: #990073;
 }
@@ -1400,6 +1477,9 @@ display: none;
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -1477,6 +1557,14 @@ border-radius: 0px;
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore">Introduction to R</h1>
@@ -1486,13 +1574,22 @@ border-radius: 0px;
 </div>
 
 
+<hr />
 <div id="what-is-vector" class="section level3">
 <h3>What is vector?</h3>
 <p>Vectors are one of the most fundamental data structures in R. They
 are essentially ordered collections of elements, where all elements must
-be of the same data type.<br> In R, the <code>c()</code> function is a
-fundamental tool used to combine values into a vector. A vector is a
-one-dimensional array that can hold elements of the same data type.</p>
+be of the same data type.<br></p>
+<p>In R, the <code>c()</code> function is a fundamental tool used to
+combine values into a vector. A vector is a one-dimensional array that
+can hold elements of the same data type.</p>
+<hr />
+</div>
+<div id="vector-using-c-function" class="section level3">
+<h3>Vector using <code>c()</code> function</h3>
+<p>In R, the <code>c()</code> function is a fundamental tool used to
+combine values into a vector. A vector is a one-dimensional array that
+can hold elements of the same data type.</p>
 <pre class="r"><code># Declared variable of different types using vector
 my_number &lt;- c(1, 10, 15)
 print(my_number)</code></pre>
@@ -1505,8 +1602,8 @@ print(my_character, str(my_character))</code></pre>
 print(my_logical)</code></pre>
 <pre><code>## [1] FALSE  TRUE FALSE</code></pre>
 </div>
-<div id="names--" class="section level3">
-<h3>Names —-</h3>
+<div id="names" class="section level3">
+<h3>Names</h3>
 <p>The <code>names()</code> function is used to get or set the names of
 elements within an object, such as a vector, list, or data frame.</p>
 <div id="setting-names" class="section level4">
@@ -1541,6 +1638,7 @@ print(daily_sales_2)</code></pre>
 <pre class="r"><code>names(daily_sales)</code></pre>
 <pre><code>## [1] &quot;Monday&quot;    &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;    &quot;Saturday&quot; 
 ## [7] &quot;Sunday&quot;</code></pre>
+<hr />
 </div>
 </div>
 <div id="setting-names-using-variables" class="section level3">
@@ -1577,6 +1675,7 @@ names(total_sales) &lt;- days_vector
 print(total_sales)</code></pre>
 <pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
 ##       120       280        85        40        40       170       220</code></pre>
+<hr />
 </div>
 <div id="vector-using-sum-function" class="section level3">
 <h3>Vector using <code>sum()</code> function</h3>
@@ -1613,6 +1712,57 @@ total_sales &lt;- sum(sum_sales_burger, sum_sales_lemonade)
 # Print the total_sales with days_vector
 print(total_sales)</code></pre>
 <pre><code>## [1] 955</code></pre>
+<hr />
+</div>
+<div id="comparing-vectors" class="section level3">
+<h3>Comparing vectors</h3>
+<p>R provides several methods for comparing vectors, both element-wise
+and overall.</p>
+<p>Element-wise Comparison You can use comparison operators like
+<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>,
+<code>&lt;=</code>, and <code>&gt;=</code> to compare elements in two
+vectors of the same length. The result is a logical vector of the same
+length, indicating the truth value of each comparison.</p>
+<pre class="r"><code># Create two numeric vectors
+vector1 &lt;- c(10, 20, 30, 40)
+vector2 &lt;- c(15, 20, 25, 40)
+
+# Compare elements using ==
+result &lt;- vector1 == vector2
+print(result)</code></pre>
+<pre><code>## [1] FALSE  TRUE FALSE  TRUE</code></pre>
+</div>
+<div id="selection" class="section level3">
+<h3>Selection</h3>
+<p>In R, the square bracket [] operator is a versatile tool for
+selecting elements from various data structures, including vectors,
+matrices, data frames, and lists.</p>
+<pre class="r"><code># Create a vector of sales_burger
+sales_burger &lt;- c(100, 250, 75, 15, 20, 120, 150)
+names(sales_burger) &lt;- days_vector
+print(sales_burger)</code></pre>
+<pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
+##       100       250        75        15        20       120       150</code></pre>
+<pre class="r"><code># Create a vector of sales_lemonade
+sales_lemonade &lt;- c(20, 30, 10, 25, 20, 50, 70)
+names(sales_lemonade) &lt;- days_vector
+print(sales_lemonade)</code></pre>
+<pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
+##        20        30        10        25        20        50        70</code></pre>
+<pre class="r"><code># Create a vector of days
+days_vector &lt;- c(&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;, &quot;Sunday&quot;)
+
+# Define a new variable based on a selection
+burger_tuesday &lt;- sales_burger[2]
+lemonade_tuesday &lt;- sales_lemonade[2]
+
+# Print result
+print(burger_tuesday)</code></pre>
+<pre><code>## Tuesday 
+##     250</code></pre>
+<pre class="r"><code>print(lemonade_tuesday)</code></pre>
+<pre><code>## Tuesday 
+##      30</code></pre>
 </div>
 
 
@@ -1650,6 +1800,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
 
 <script>
 $(document).ready(function ()  {

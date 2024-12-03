@@ -10,14 +10,24 @@ output:
     toc_depth: 4
     number_sections: false
     theme: cerulean
+    code_folding: show
+    
+---
+
 ---
 
 ### What is vector?
 Vectors are one of the most fundamental data structures in R.
 They are essentially ordered collections of elements, where all elements must be of the same data type.<br>
+
 In R, the `c()` function is a fundamental tool used to combine values into a vector. A vector is a one-dimensional array that can hold elements of the same data type.
 
-```{r}
+---
+
+### Vector using `c()` function
+In R, the `c()` function is a fundamental tool used to combine values into a vector. A vector is a one-dimensional array that can hold elements of the same data type.
+
+```{r combine}
 # Declared variable of different types using vector
 my_number <- c(1, 10, 15)
 print(my_number)
@@ -29,13 +39,13 @@ my_logical <- c(FALSE, TRUE, FALSE)
 print(my_logical)
 ```
 
-### Names ----
+### Names
 The `names()` function is used to get or set the names of elements within an object, such as a vector, list, or data frame.
 
 #### Setting Names
 To assign names to an object, you use the assignment operator `<-` with the `names()` function:
 
-```{r}
+```{r names}
 # Unnamed vector as daily_sales_2
 daily_sales <- c(100, 250, 75, 15, 20, 90, 120)
 
@@ -46,7 +56,7 @@ names(daily_sales) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 print(daily_sales)
 ```
 You can also assign names directly when creating a vector using `=` (equal) sign
-```{r}
+```{r setting_names}
 
 # Unnamed vector as daily_sales
 daily_sales_2 <- c("Monday" = 100, "Tuesday" = 250, "Wednesday" = 75, "Thursday" = 15, "Friday" = 20, "Saturday" = 90, "Sunday" = 120)
@@ -61,12 +71,14 @@ Using `=` equal sign assigning the variable
 #### Getting Names
 To retrieve the names of an object, you simply use the `names()` function:
 
-```{r}
+```{r getting_names}
 names(daily_sales)
 ```
 
+---
+
 ### Setting names using variables
-```{r}
+```{r setting_names_2}
 # Number of fingers in sequence
 finger_number <- c(1, 2, 3, 4, 5)
 # Names of fingers from Thumb to Pinky
@@ -98,6 +110,8 @@ names(total_sales) <- days_vector
 print(total_sales)
 
 ```
+
+---
 
 ### Vector using `sum()` function
 ```{r}
@@ -131,3 +145,48 @@ total_sales <- sum(sum_sales_burger, sum_sales_lemonade)
 # Print the total_sales with days_vector
 print(total_sales)
 ```
+
+---
+
+### Comparing vectors
+R provides several methods for comparing vectors, both element-wise and overall.
+
+Element-wise Comparison
+You can use comparison operators like `==`, `!=`, `<`, `>`, `<=`, and `>=` to compare elements in two vectors of the same length. The result is a logical vector of the same length, indicating the truth value of each comparison.
+
+```{r}
+# Create two numeric vectors
+vector1 <- c(10, 20, 30, 40)
+vector2 <- c(15, 20, 25, 40)
+
+# Compare elements using ==
+result <- vector1 == vector2
+print(result)
+```
+
+### Selection
+In R, the square bracket [] operator is a versatile tool for selecting elements from various data structures, including vectors, matrices, data frames, and lists.
+```{r}
+# Create a vector of sales_burger
+sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
+names(sales_burger) <- days_vector
+print(sales_burger)
+
+# Create a vector of sales_lemonade
+sales_lemonade <- c(20, 30, 10, 25, 20, 50, 70)
+names(sales_lemonade) <- days_vector
+print(sales_lemonade)
+
+# Create a vector of days
+days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+# Define a new variable based on a selection
+burger_tuesday <- sales_burger[2]
+lemonade_tuesday <- sales_lemonade[2]
+
+# Print result
+print(burger_tuesday)
+print(lemonade_tuesday)
+
+```
+
