@@ -20,7 +20,7 @@ output:
 Vectors are one of the most fundamental data structures in R.
 They are essentially ordered collections of elements, where all elements must be of the same data type.<br>
 
-In R, the `c()` function is a fundamental tool used to combine values into a vector. A vector is a one-dimensional array that can hold elements of the same data type.
+In R, the `c()` function is a fundamental tool used to combine values into a vector. A vector is a one-dimensional array that can hold elements of the same data type. Combining series of elements in a vector
 
 ---
 
