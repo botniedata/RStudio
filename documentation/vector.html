@@ -1593,15 +1593,17 @@ combine values into a vector. A vector is a one-dimensional array that
 can hold elements of the same data type.</p>
 <pre class="r"><code># Declared variable of different types using vector
 my_number &lt;- c(1, 10, 15)
-print(my_number)</code></pre>
-<pre><code>## [1]  1 10 15</code></pre>
+print(my_number, str(my_number))</code></pre>
+<pre><code>##  num [1:3] 1 10 15
+## [1]  1 10 15</code></pre>
 <pre class="r"><code>my_character &lt;- c(&quot;z&quot;, &quot;x&quot;, &quot;y&quot;)
 print(my_character, str(my_character))</code></pre>
 <pre><code>##  chr [1:3] &quot;z&quot; &quot;x&quot; &quot;y&quot;
 ## [1] &quot;z&quot; &quot;x&quot; &quot;y&quot;</code></pre>
 <pre class="r"><code>my_logical &lt;- c(FALSE, TRUE, FALSE)
-print(my_logical)</code></pre>
-<pre><code>## [1] FALSE  TRUE FALSE</code></pre>
+print(my_logical, str(my_logical))</code></pre>
+<pre><code>##  logi [1:3] FALSE TRUE FALSE
+## [1] FALSE  TRUE FALSE</code></pre>
 <hr />
 </div>
 <div id="names" class="section level3">
@@ -1856,6 +1858,59 @@ print(avg_sales_burger)</code></pre>
 avg_sales_lemonade &lt;- mean(weekdays_avg_sales_lemonade)
 print(avg_sales_lemonade)</code></pre>
 <pre><code>## [1] 21</code></pre>
+<hr />
+</div>
+<div id="selection-comparisson" class="section level4">
+<h4>Selection comparisson</h4>
+<pre class="r"><code># Create a vector of sales_burger
+sales_burger &lt;- c(100, 250, 75, 15, 20, 120, 150)
+names(sales_burger) &lt;- days_vector
+
+# Create a vector of sales_lemonade
+sales_lemonade &lt;- c(20, 30, 10, 25, 20, 50, 70)
+names(sales_lemonade) &lt;- days_vector
+
+# Assign variable of days_vector
+days_vector &lt;- c(&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;, &quot;Sunday&quot;)</code></pre>
+<hr />
+</div>
+<div id="burger--" class="section level4">
+<h4>Burger —-</h4>
+<pre class="r"><code># Which days did you make a sales more than 50?
+sales_burger_above50 &lt;- sales_burger &gt; 50
+print(sales_burger_above50)</code></pre>
+<pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
+##      TRUE      TRUE      TRUE     FALSE     FALSE      TRUE      TRUE</code></pre>
+<pre class="r"><code># Which days did you make a sales more than 50?
+sales_burger_below50 &lt;- sales_burger &lt; 50
+print(sales_burger_below50)</code></pre>
+<pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
+##     FALSE     FALSE     FALSE      TRUE      TRUE     FALSE     FALSE</code></pre>
+<pre class="r"><code># Prints only the days with sales above 50
+print(days_vector[sales_burger_above50])</code></pre>
+<pre><code>## [1] &quot;Monday&quot;    &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Saturday&quot;  &quot;Sunday&quot;</code></pre>
+<pre class="r"><code># Prints only the days with sales below 50
+print(days_vector[sales_burger_below50])</code></pre>
+<pre><code>## [1] &quot;Thursday&quot; &quot;Friday&quot;</code></pre>
+</div>
+<div id="lemonade--" class="section level4">
+<h4>Lemonade —-</h4>
+<pre class="r"><code># Which days did you make a sales more than 50?
+sales_lemonade_above50 &lt;- sales_lemonade &gt; 50
+print(sales_lemonade_above50)</code></pre>
+<pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
+##     FALSE     FALSE     FALSE     FALSE     FALSE     FALSE      TRUE</code></pre>
+<pre class="r"><code># Which days did you make a sales more than 50?
+sales_lemonade_below50 &lt;- sales_lemonade &lt; 50
+print(sales_lemonade_below50)</code></pre>
+<pre><code>##    Monday   Tuesday Wednesday  Thursday    Friday  Saturday    Sunday 
+##      TRUE      TRUE      TRUE      TRUE      TRUE     FALSE     FALSE</code></pre>
+<pre class="r"><code># Prints only the days with sales above 50
+print(days_vector[sales_lemonade_above50])</code></pre>
+<pre><code>## [1] &quot;Sunday&quot;</code></pre>
+<pre class="r"><code># Prints only the days with sales below 50
+print(days_vector[sales_lemonade_below50])</code></pre>
+<pre><code>## [1] &quot;Monday&quot;    &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;</code></pre>
 </div>
 </div>
 

@@ -30,13 +30,13 @@ In R, the `c()` function is a fundamental tool used to combine values into a vec
 ```{r combine}
 # Declared variable of different types using vector
 my_number <- c(1, 10, 15)
-print(my_number)
+print(my_number, str(my_number))
 
 my_character <- c("z", "x", "y")
 print(my_character, str(my_character))
 
 my_logical <- c(FALSE, TRUE, FALSE)
-print(my_logical)
+print(my_logical, str(my_logical))
 ```
 
 ---
@@ -95,7 +95,7 @@ print(finger_number)
 ---
 
 ### Vectors with Math Operator
-```{r}
+```{r vector with math operator}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
 
@@ -118,7 +118,7 @@ print(total_sales)
 ---
 
 ### Vector using `sum()` function
-```{r}
+```{r sum function}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
 names(sales_burger) <- days_vector
@@ -158,7 +158,7 @@ R provides several methods for comparing vectors, both element-wise and overall.
 Element-wise Comparison
 You can use comparison operators like `==`, `!=`, `<`, `>`, `<=`, and `>=` to compare elements in two vectors of the same length. The result is a logical vector of the same length, indicating the truth value of each comparison.
 
-```{r}
+```{r comparing vectors}
 # Create two numeric vectors
 vector1 <- c(10, 20, 30, 40)
 vector2 <- c(15, 20, 25, 40)
@@ -174,7 +174,7 @@ print(result)
 
 #### Selection on single element
 Selects the second elements from each vector, which corresponds to Tuesday's sales for burger and lemonade, respectively.
-```{r}
+```{r selection in single value}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
 names(sales_burger) <- days_vector
@@ -203,7 +203,7 @@ print(lemonade_tuesday)
 
 #### Selection containing elements
 Selects the first, third and fifth elements from both vectors, which correspond to Monday, Wednesday and Friday's sales for each vector respectively.
-```{r}
+```{r selection containing elements}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
 names(sales_burger) <- days_vector
@@ -230,7 +230,7 @@ print(fml_lemonade)
 
 #### Selection range elements
 Select the first and fourth elements of vector which correspond to Monday to Thursday's Burget and Lemonade Sales
-```{r}
+```{r selection range elements}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
 names(sales_burger) <- days_vector
@@ -257,7 +257,7 @@ print(mth_lemonade)
 
 #### Selection range with calculation
 Calculating Average Weekday Burger and Lemonade Sales
-```{r}
+```{r selection with calculation}
 # Create a vector of sales_burger
 sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
 names(sales_burger) <- days_vector
@@ -280,4 +280,57 @@ print(avg_sales_burger)
 # Calculate the average sales of lemonade from Weekdays
 avg_sales_lemonade <- mean(weekdays_avg_sales_lemonade)
 print(avg_sales_lemonade)
+```
+
+---
+
+#### Selection comparisson
+```{r}
+# Create a vector of sales_burger
+sales_burger <- c(100, 250, 75, 15, 20, 120, 150)
+names(sales_burger) <- days_vector
+
+# Create a vector of sales_lemonade
+sales_lemonade <- c(20, 30, 10, 25, 20, 50, 70)
+names(sales_lemonade) <- days_vector
+
+# Assign variable of days_vector
+days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+```
+
+---
+
+#### Burger ----
+```{r}
+# Which days did you make a sales more than 50?
+sales_burger_above50 <- sales_burger > 50
+print(sales_burger_above50)
+
+# Which days did you make a sales more than 50?
+sales_burger_below50 <- sales_burger < 50
+print(sales_burger_below50)
+
+# Prints only the days with sales above 50
+print(days_vector[sales_burger_above50])
+
+# Prints only the days with sales below 50
+print(days_vector[sales_burger_below50])
+
+```
+#### Lemonade ----
+```{r}
+# Which days did you make a sales more than 50?
+sales_lemonade_above50 <- sales_lemonade > 50
+print(sales_lemonade_above50)
+
+# Which days did you make a sales more than 50?
+sales_lemonade_below50 <- sales_lemonade < 50
+print(sales_lemonade_below50)
+
+# Prints only the days with sales above 50
+print(days_vector[sales_lemonade_above50])
+
+# Prints only the days with sales below 50
+print(days_vector[sales_lemonade_below50])
+
 ```
