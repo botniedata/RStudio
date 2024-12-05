@@ -1,0 +1,67 @@
+---
+title: "Introduction to R"
+author: "BotnieData"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      toc_collapsed: true
+    toc_depth: 4
+    number_sections: false
+    theme: cerulean
+    code_folding: show
+    
+---
+
+---
+
+### What is matrix?
+In R, the matrix() function is a versatile tool for creating matrices.<br>
+A matrix is a rectangular array of numbers, symbols, or expressions, arranged in rows and columns.
+
+---
+```{r}
+#matrix(data, nrow, ncol, byrow = FALSE, dimnames = NULL)
+```
+Arguements:<br>
+• **data**: A vector containing the elements of the matrix.<br>
+• **nrow**: The desired number of rows.<br>
+• **ncol**: The desired number of columns.<br>
+• **byrow**: A logical value indicating whether the matrix should be filled by row (TRUE) or by column (FALSE, default).<br>
+• **dimnames**: A list of two character vectors, providing row and column names.<br>
+
+---
+
+### 3x3 Matrix
+Create a 3x3 matrix with numbers 1 to 9, filled by row:
+
+```{r matrix}
+my_matrix <- matrix(1:9, nrow = 3, byrow = TRUE)
+print(my_matrix)
+```
+
+---
+
+### Analyze matrices
+Box office movies of Star Wars named new_hope, empire_strikes and return_jedi
+```{r analyze_matrix}
+# Box office Star Wars (in millions!)
+new_hope <- c(460.998, 314.4)
+empire_strikes <- c(290.475, 247.900)
+return_jedi <- c(309.306, 165.8)
+```
+Combine the 3 vector into one vector named as box_office
+
+```{r}
+# Create box_office
+box_office <- c(new_hope, empire_strikes, return_jedi)
+print(box_office)
+```
+
+Create a matrix
+```{r}
+# Construct star_wars_matrix
+star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE)
+print(star_wars_matrix)
+```

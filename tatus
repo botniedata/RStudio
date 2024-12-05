@@ -1,0 +1,159 @@
+[33mcommit ad72e172d6e23ab7dfbff1aefc4837045db40818[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: botniedata <botniedata@gmail.com>
+Date:   Wed Dec 4 10:33:44 2024 +0800
+
+    update the header to intro to r.rmd
+
+[1mdiff --git a/documentation/Introduction to R.Rmd b/documentation/Introduction to R.Rmd[m
+[1mindex fdf4785..da129f1 100644[m
+[1m--- a/documentation/Introduction to R.Rmd[m	
+[1m+++ b/documentation/Introduction to R.Rmd[m	
+[36m@@ -10,6 +10,8 @@[m [moutput:[m
+     toc_depth: 4[m
+     number_sections: false[m
+     theme: cerulean[m
+[32m+[m[32m    code_folding: show[m
+[32m+[m[41m    [m
+ ---[m
+ [m
+ ## **Topics**[m
+[1mdiff --git a/documentation/Introduction-to-R.html b/documentation/Introduction-to-R.html[m
+[1mindex 01f7708..bcd49f3 100644[m
+[1m--- a/documentation/Introduction-to-R.html[m
+[1m+++ b/documentation/Introduction-to-R.html[m
+[36m@@ -11,7 +11,7 @@[m
+ [m
+ <meta name="author" content="BotnieData" />[m
+ [m
+[31m-<meta name="date" content="2024-12-03" />[m
+[32m+[m[32m<meta name="date" content="2024-12-04" />[m
+ [m
+ <title>Introduction to R</title>[m
+ [m
+[36m@@ -1276,6 +1276,83 @@[m [mwindow.buildTabsets = function(tocID) {[m
+   });[m
+ };[m
+ [m
+[32m+[m[32m</script>[m
+[32m+[m[32m<script>[m
+[32m+[m[32mwindow.initializeCodeFolding = function(show) {[m
+[32m+[m
+[32m+[m[32m  // handlers for show-all and hide all[m
+[32m+[m[32m  $("#rmd-show-all-code").click(function() {[m
+[32m+[m[32m    $('div.r-code-collapse').each(function() {[m
+[32m+[m[32m      $(this).collapse('show');[m
+[32m+[m[32m    });[m
+[32m+[m[32m  });[m
+[32m+[m[32m  $("#rmd-hide-all-code").click(function() {[m
+[32m+[m[32m    $('div.r-code-collapse').each(function() {[m
+[32m+[m[32m      $(this).collapse('hide');[m
+[32m+[m[32m    });[m
+[32m+[m[32m  });[m
+[32m+[m
+[32m+[m[32m  // index for unique code element ids[m
+[32m+[m[32m  var currentIndex = 1;[m
+[32m+[m
+[32m+[m[32m  // select all R code blocks[m
+[32m+[m[32m  var rCodeBlocks = $('pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan, pre.julia, pre.foldable');[m
+[32m+[m[32m  rCodeBlocks.each(function() {[m
+[32m+[m[32m    // skip if the block has fold-none class[m
+[32m+[m[32m    if ($(this).hasClass('fold-none')) return;[m
+[32m+[m
+[32m+[m[32m    // create a collapsable div to wrap the code in[m
+[32m+[m[32m    var div = $('<div class="collapse r-code-collapse"></div>');[m
+[32m+[m[32m    var showThis = (show || $(this).hasClass('fold-show')) && !$(this).hasClass('fold-hide');[m
+[32m+[m[32m    var id = 'rcode-643E0F36' + currentIndex++;[m
+[32m+[m[32m    div.attr('id', id);[m
+[32m+[m[32m    $(this).before(div);[m
+[32m+[m[32m    $(this).detach().appendTo(div);[m
+[32m+[m
+[32m+[m[32m    // add a show code button right above[m
+[32m+[m[32m    var showCodeText = $('<span>' + (showThis ? 'Hide' : 'Show') + '</span>');[m
+[32m+[m[32m    var showCodeButton = $('<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm code-folding-btn pull-right float-right"></button>');[m
+[32m+[m[32m    showCodeButton.append(showCodeText);[m
+[32m+[m[32m    showCodeButton[m
+[32m+[m[32m        .attr('data-toggle', 'collapse')[m
+[32m+[m[32m        .attr('data-bs-toggle', 'collapse') // BS5[m
+[32m+[m[32m        .attr('data-target', '#' + id)[m
+[32m+[m[32m        .attr('data-bs-target', '#' + id)   // BS5[m
+[32m+[m[32m        .attr('aria-expanded', showThis)[m
+[32m+[m[32m        .attr('aria-controls', id);[m
+[32m+[m
+[32m+[m[32m    var buttonRow = $('<div class="row"></div>');[m
+[32m+[m[32m    var buttonCol = $('<div class="col-md-12"></div>');[m
+[32m+[m
+[32m+[m[32m    buttonCol.append(showCodeButton);[m
+[32m+[m[32m    buttonRow.append(buttonCol);[m
+[32m+[m
+[32m+[m[32m    div.before(buttonRow);[m
+[32m+[m
+[32m+[m[32m    // show the div if necessary[m
+[32m+[m[32m    if (showThis) div.collapse('show');[m
+[32m+[m
+[32m+[m[32m    // update state of button on show/hide[m
+[32m+[m[32m    //   * Change text[m
+[32m+[m[32m    //   * add a class for intermediate states styling[m
+[32m+[m[32m    div.on('hide.bs.collapse', function () {[m
+[32m+[m[32m      showCodeText.text('Show');[m
+[32m+[m[32m      showCodeButton.addClass('btn-collapsing');[m
+[32m+[m[32m    });[m
+[32m+[m[32m    div.on('hidden.bs.collapse', function () {[m
+[32m+[m[32m      showCodeButton.removeClass('btn-collapsing');[m
+[32m+[m[32m    });[m
+[32m+[m[32m    div.on('show.bs.collapse', function () {[m
+[32m+[m[32m      showCodeText.text('Hide');[m
+[32m+[m[32m      showCodeButton.addClass('btn-expanding');[m
+[32m+[m[32m    });[m
+[32m+[m[32m    div.on('shown.bs.collapse', function () {[m
+[32m+[m[32m      showCodeButton.removeClass('btn-expanding');[m
+[32m+[m[32m    });[m
+[32m+[m
+[32m+[m[32m  });[m
+[32m+[m
+[32m+[m[32m}[m
+ </script>[m
+ <style type="text/css">.hljs-literal {[m
+ color: #990073;[m
+[36m@@ -1400,6 +1477,9 @@[m [mdisplay: none;[m
+ </style>[m
+ [m
+ <!-- code folding -->[m
+[32m+[m[32m<style type="text/css">[m
+[32m+[m[32m.code-folding-btn { margin-bottom: 4px; }[m
+[32m+[m[32m</style>[m
+ [m
+ [m
+ [m
+[36m@@ -1477,11 +1557,19 @@[m [mborder-radius: 0px;[m
+ [m
+ <div id="header">[m
+ [m
+[32m+[m[32m<div class="btn-group pull-right float-right">[m
+[32m+[m[32m<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>[m
+[32m+[m[32m<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">[m
+[32m+[m[32m<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>[m
+[32m+[m[32m<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>[m
+[32m+[m[32m</ul>[m
+[32m+[m[32m</div>[m
+[32m+[m
+ [m
+ [m
+ <h1 class="title toc-ignore">Introduction to R</h1>[m
+ <h4 class="author">BotnieData</h4>[m
+[31m-<h4 class="date">03 December 2024</h4>[m
+[32m+[m[32m<h4 class="date">04 December 2024</h4>[m
+ [m
+ </div>[m
+ [m
+[36m@@ -1700,6 +1788,11 @@[m [m$(document).ready(function () {[m
+ </script>[m
+ [m
+ <!-- code folding -->[m
+[32m+[m[32m<script>[m
+[32m+[m[32m$(document).ready(function () {[m
+[32m+[m[32m  window.initializeCodeFolding("show" === "show");[m
+[32m+[m[32m});[m
+[32m+[m[32m</script>[m
+ [m
+ <script>[m
+ $(document).ready(function ()  {[m
