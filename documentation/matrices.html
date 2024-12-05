@@ -11,7 +11,7 @@
 
 <meta name="author" content="BotnieData" />
 
-<meta name="date" content="2024-12-04" />
+<meta name="date" content="2024-12-05" />
 
 <title>Introduction to R</title>
 
@@ -1569,7 +1569,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">Introduction to R</h1>
 <h4 class="author">BotnieData</h4>
-<h4 class="date">04 December 2024</h4>
+<h4 class="date">05 December 2024</h4>
 
 </div>
 
@@ -1623,6 +1623,84 @@ print(star_wars_matrix)</code></pre>
 ## [1,] 460.998 314.4
 ## [2,] 290.475 247.9
 ## [3,] 309.306 165.8</code></pre>
+<hr />
+</div>
+<div id="naming-a-matrix" class="section level3">
+<h3>Naming a matrix</h3>
+<pre class="r"><code># Box office Star Wars (in millions!)
+new_hope &lt;- c(460.998, 314.4)
+empire_strikes &lt;- c(290.475, 247.900)
+return_jedi &lt;- c(309.306, 165.8)
+
+# Construct matrix
+star_wars_matrix &lt;- matrix(c(new_hope, empire_strikes, return_jedi), nrow = 3, byrow = TRUE)
+print(star_wars_matrix)</code></pre>
+<pre><code>##         [,1]  [,2]
+## [1,] 460.998 314.4
+## [2,] 290.475 247.9
+## [3,] 309.306 165.8</code></pre>
+<pre class="r"><code># Vectors region and titles, used for naming
+region &lt;- c(&quot;US&quot;, &quot;non-US&quot;)
+titles &lt;- c(&quot;A New Hope&quot;, &quot;The Empire Strikes Back&quot;, &quot;Return of the Jedi&quot;)</code></pre>
+<p>The <code>colnames()</code> function in R is a versitile tool used
+to: <br></p>
+<ol style="list-style-type: decimal">
+<li><p><em>Retrieve Column Names</em>: <br> • Returns a character vector
+containing the names of the columns in a data frame or matrix.</p></li>
+<li><p><em>Set Column Names</em>:<br> • Assigns new names to the columns
+of a data frame or matrix.<br> The new names must be provided as a
+character vector of the same length as the number of columns.</p></li>
+</ol>
+<pre class="r"><code># Name the columns with region
+colnames(star_wars_matrix) &lt;- region</code></pre>
+<p>The <code>rownames()</code> function in R is used to: <br></p>
+<ol style="list-style-type: decimal">
+<li><p><em>Retrieve Row Names</em>:<br> • Returns a character vector
+containing the names of the rows in a data frame or matrix.<br></p></li>
+<li><p><em>Set Row Names</em>:<br> • Assigns new names to the rows of a
+data frame or matrix.<br> The new names must be provided as a character
+vector of the same length as the number of rows.</p></li>
+</ol>
+<pre class="r"><code># Name the rows with titles
+rownames(star_wars_matrix) &lt;- titles
+
+# Print out star_wars_matrix
+star_wars_matrix</code></pre>
+<pre><code>##                              US non-US
+## A New Hope              460.998  314.4
+## The Empire Strikes Back 290.475  247.9
+## Return of the Jedi      309.306  165.8</code></pre>
+<hr />
+</div>
+<div id="calculate-rowsums-function" class="section level3">
+<h3>Calculate: <code>rowSums()</code> function</h3>
+<p>The <code>rowSums()</code> function in R is used to calculate the sum
+of values across each row of a matrix or data frame.</p>
+<pre class="r"><code># Construct star_wars_matrix
+box_office &lt;- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+region &lt;- c(&quot;US&quot;, &quot;non-US&quot;)
+titles &lt;- c(&quot;A New Hope&quot;, 
+                 &quot;The Empire Strikes Back&quot;, 
+                 &quot;Return of the Jedi&quot;)
+
+# Create a matrix named as star_wars_matrix     
+star_wars_matrix &lt;- matrix(box_office, 
+                      nrow = 3, byrow = TRUE,
+                      dimnames = list(titles, region))
+
+# Display the created matrix
+print(star_wars_matrix)</code></pre>
+<pre><code>##                              US non-US
+## A New Hope              460.998  314.4
+## The Empire Strikes Back 290.475  247.9
+## Return of the Jedi      309.306  165.8</code></pre>
+<pre class="r"><code># Calculate worldwide box office figures
+worldwide_vector &lt;- rowSums(star_wars_matrix)
+
+# Print the rowSums() result
+worldwide_vector</code></pre>
+<pre><code>##              A New Hope The Empire Strikes Back      Return of the Jedi 
+##                 775.398                 538.375                 475.106</code></pre>
 </div>
 
 

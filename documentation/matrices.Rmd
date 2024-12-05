@@ -65,3 +65,76 @@ Create a matrix
 star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE)
 print(star_wars_matrix)
 ```
+
+---
+
+### Naming a matrix
+```{r}
+# Box office Star Wars (in millions!)
+new_hope <- c(460.998, 314.4)
+empire_strikes <- c(290.475, 247.900)
+return_jedi <- c(309.306, 165.8)
+
+# Construct matrix
+star_wars_matrix <- matrix(c(new_hope, empire_strikes, return_jedi), nrow = 3, byrow = TRUE)
+print(star_wars_matrix)
+
+# Vectors region and titles, used for naming
+region <- c("US", "non-US")
+titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
+```
+The `colnames()` function in R is a versitile tool used to: <br>
+
+1. *Retrieve Column Names*: <br>
+•  Returns a character vector containing the names of the columns in a data frame or matrix.
+
+2. *Set Column Names*:<br>
+•  Assigns new names to the columns of a data frame or matrix.<br>
+The new names must be provided as a character vector of the same length as the number of columns.
+```{r}
+# Name the columns with region
+colnames(star_wars_matrix) <- region
+```
+The `rownames()` function in R is used to: <br>
+
+1. *Retrieve Row Names*:<br>
+•  Returns a character vector containing the names of the rows in a data frame or matrix.<br>
+
+2. *Set Row Names*:<br>
+•  Assigns new names to the rows of a data frame or matrix.<br>
+The new names must be provided as a character vector of the same length as the number of rows.
+
+```{r}
+# Name the rows with titles
+rownames(star_wars_matrix) <- titles
+
+# Print out star_wars_matrix
+star_wars_matrix
+```
+
+---
+
+### Calculate: `rowSums()` function
+The `rowSums()` function in R is used to calculate the sum of values across each row of a matrix or data frame.
+```{r}
+# Construct star_wars_matrix
+box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+region <- c("US", "non-US")
+titles <- c("A New Hope", 
+                 "The Empire Strikes Back", 
+                 "Return of the Jedi")
+
+# Create a matrix named as star_wars_matrix     
+star_wars_matrix <- matrix(box_office, 
+                      nrow = 3, byrow = TRUE,
+                      dimnames = list(titles, region))
+
+# Display the created matrix
+print(star_wars_matrix)
+
+# Calculate worldwide box office figures
+worldwide_vector <- rowSums(star_wars_matrix)
+
+# Print the rowSums() result
+worldwide_vector
+```
