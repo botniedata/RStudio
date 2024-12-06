@@ -11,7 +11,7 @@
 
 <meta name="author" content="BotnieData" />
 
-<meta name="date" content="2024-12-05" />
+<meta name="date" content="2024-12-06" />
 
 <title>Introduction to R</title>
 
@@ -1569,18 +1569,16 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">Introduction to R</h1>
 <h4 class="author">BotnieData</h4>
-<h4 class="date">05 December 2024</h4>
+<h4 class="date">06 December 2024</h4>
 
 </div>
 
 
-<hr />
 <div id="what-is-matrix" class="section level3">
 <h3>What is matrix?</h3>
 <p>In R, the matrix() function is a versatile tool for creating
 matrices.<br> A matrix is a rectangular array of numbers, symbols, or
 expressions, arranged in rows and columns.</p>
-<hr />
 <pre class="r"><code>#matrix(data, nrow, ncol, byrow = FALSE, dimnames = NULL)</code></pre>
 <p>Arguements:<br> • <strong>data</strong>: A vector containing the
 elements of the matrix.<br> • <strong>nrow</strong>: The desired number
@@ -1609,13 +1607,12 @@ return_jedi</p>
 <pre class="r"><code># Box office Star Wars (in millions!)
 new_hope &lt;- c(460.998, 314.4)
 empire_strikes &lt;- c(290.475, 247.900)
-return_jedi &lt;- c(309.306, 165.8)</code></pre>
-<p>Combine the 3 vector into one vector named as box_office</p>
-<pre class="r"><code># Create box_office
+return_jedi &lt;- c(309.306, 165.8)
+
+# Create box_office
 box_office &lt;- c(new_hope, empire_strikes, return_jedi)
 print(box_office)</code></pre>
 <pre><code>## [1] 460.998 314.400 290.475 247.900 309.306 165.800</code></pre>
-<p>Create a matrix</p>
 <pre class="r"><code># Construct star_wars_matrix
 star_wars_matrix &lt;- matrix(box_office, nrow = 3, byrow = TRUE)
 print(star_wars_matrix)</code></pre>
@@ -1627,6 +1624,23 @@ print(star_wars_matrix)</code></pre>
 </div>
 <div id="naming-a-matrix" class="section level3">
 <h3>Naming a matrix</h3>
+<p>The <code>colnames()</code> function in R is a versitile tool used
+to: <br></p>
+<ol style="list-style-type: decimal">
+<li><p><em>Retrieve Column Names</em>: <br> • Returns a character vector
+containing the names of the columns in a data frame or matrix.</p></li>
+<li><p><em>Set Column Names</em>:<br> • Assigns new names to the columns
+of a data frame or matrix.<br> The new names must be provided as a
+character vector of the same length as the number of columns.</p></li>
+</ol>
+<p>The <code>rownames()</code> function in R is used to: <br></p>
+<ol style="list-style-type: decimal">
+<li><p><em>Retrieve Row Names</em>:<br> • Returns a character vector
+containing the names of the rows in a data frame or matrix.<br></p></li>
+<li><p><em>Set Row Names</em>:<br> • Assigns new names to the rows of a
+data frame or matrix.<br> The new names must be provided as a character
+vector of the same length as the number of rows.</p></li>
+</ol>
 <pre class="r"><code># Box office Star Wars (in millions!)
 new_hope &lt;- c(460.998, 314.4)
 empire_strikes &lt;- c(290.475, 247.900)
@@ -1641,39 +1655,24 @@ print(star_wars_matrix)</code></pre>
 ## [3,] 309.306 165.8</code></pre>
 <pre class="r"><code># Vectors region and titles, used for naming
 region &lt;- c(&quot;US&quot;, &quot;non-US&quot;)
-titles &lt;- c(&quot;A New Hope&quot;, &quot;The Empire Strikes Back&quot;, &quot;Return of the Jedi&quot;)</code></pre>
-<p>The <code>colnames()</code> function in R is a versitile tool used
-to: <br></p>
-<ol style="list-style-type: decimal">
-<li><p><em>Retrieve Column Names</em>: <br> • Returns a character vector
-containing the names of the columns in a data frame or matrix.</p></li>
-<li><p><em>Set Column Names</em>:<br> • Assigns new names to the columns
-of a data frame or matrix.<br> The new names must be provided as a
-character vector of the same length as the number of columns.</p></li>
-</ol>
-<pre class="r"><code># Name the columns with region
-colnames(star_wars_matrix) &lt;- region</code></pre>
-<p>The <code>rownames()</code> function in R is used to: <br></p>
-<ol style="list-style-type: decimal">
-<li><p><em>Retrieve Row Names</em>:<br> • Returns a character vector
-containing the names of the rows in a data frame or matrix.<br></p></li>
-<li><p><em>Set Row Names</em>:<br> • Assigns new names to the rows of a
-data frame or matrix.<br> The new names must be provided as a character
-vector of the same length as the number of rows.</p></li>
-</ol>
-<pre class="r"><code># Name the rows with titles
+titles &lt;- c(&quot;A New Hope&quot;, &quot;The Empire Strikes Back&quot;, &quot;Return of the Jedi&quot;)
+
+# Name the columns with region
+colnames(star_wars_matrix) &lt;- region
+
+# Name the rows with titles
 rownames(star_wars_matrix) &lt;- titles
 
 # Print out star_wars_matrix
-star_wars_matrix</code></pre>
+print(star_wars_matrix)</code></pre>
 <pre><code>##                              US non-US
 ## A New Hope              460.998  314.4
 ## The Empire Strikes Back 290.475  247.9
 ## Return of the Jedi      309.306  165.8</code></pre>
 <hr />
 </div>
-<div id="calculate-rowsums-function" class="section level3">
-<h3>Calculate: <code>rowSums()</code> function</h3>
+<div id="calculate-rowsums" class="section level3">
+<h3>Calculate: <code>rowSums()</code></h3>
 <p>The <code>rowSums()</code> function in R is used to calculate the sum
 of values across each row of a matrix or data frame.</p>
 <pre class="r"><code># Construct star_wars_matrix
@@ -1701,6 +1700,207 @@ worldwide_vector &lt;- rowSums(star_wars_matrix)
 worldwide_vector</code></pre>
 <pre><code>##              A New Hope The Empire Strikes Back      Return of the Jedi 
 ##                 775.398                 538.375                 475.106</code></pre>
+<hr />
+</div>
+<div id="adding-column-cbind" class="section level3">
+<h3>Adding Column: <code>cbind()</code></h3>
+<p>The <code>cbind()</code> function in R is a versatile tool used to
+combine multiple objects (vectors, matrices, or data frames) by
+columns.<br> This means it stacks the objects horizontally, creating a
+new object with the combined columns.</p>
+<pre class="r"><code># Construct star_wars_matrix
+box_office &lt;- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+region &lt;- c(&quot;US&quot;, &quot;non-US&quot;)
+titles &lt;- c(&quot;A New Hope&quot;, 
+            &quot;The Empire Strikes Back&quot;, 
+            &quot;Return of the Jedi&quot;)
+               
+star_wars_matrix &lt;- matrix(box_office, 
+                      nrow = 3, byrow = TRUE,
+                      dimnames = list(titles, region))
+
+# The worldwide box office figures
+worldwide_vector &lt;- rowSums(star_wars_matrix)
+# Print worldwide_vector rowSums
+print(worldwide_vector)</code></pre>
+<pre><code>##              A New Hope The Empire Strikes Back      Return of the Jedi 
+##                 775.398                 538.375                 475.106</code></pre>
+<pre class="r"><code># Bind the new variable worldwide_vector as a column to star_wars_matrix
+all_wars_matrix &lt;- cbind(star_wars_matrix, worldwide_vector)
+# Print result of cbind() of start_wars_matrix and worldwide_vector
+print(all_wars_matrix)</code></pre>
+<pre><code>##                              US non-US worldwide_vector
+## A New Hope              460.998  314.4          775.398
+## The Empire Strikes Back 290.475  247.9          538.375
+## Return of the Jedi      309.306  165.8          475.106</code></pre>
+<hr />
+</div>
+<div id="calculate-colsums" class="section level3">
+<h3>Calculate: <code>colSums()</code></h3>
+<p><code>colSums()</code> in R: Summing Up Columns <br></p>
+<p>The <code>colSums()</code> function in R is a handy tool to calculate
+the sum of values within each column of a matrix or data frame.</p>
+<pre class="r"><code># all_wars_matrix is available in your workspace
+print(all_wars_matrix)</code></pre>
+<pre><code>##                              US non-US worldwide_vector
+## A New Hope              460.998  314.4          775.398
+## The Empire Strikes Back 290.475  247.9          538.375
+## Return of the Jedi      309.306  165.8          475.106</code></pre>
+<pre class="r"><code># Total revenue for US and non-US
+total_revenue_vector &lt;- colSums(all_wars_matrix)
+  
+# Print out total_revenue_vector
+print(total_revenue_vector)</code></pre>
+<pre><code>##               US           non-US worldwide_vector 
+##         1060.779          728.100         1788.879</code></pre>
+<hr />
+</div>
+<div id="adding-row-rbind" class="section level3">
+<h3>Adding Row <code>rbind()</code></h3>
+<p>The <code>rbind()</code> function in R is used to combine multiple
+objects (vectors, matrices, or data frames) by rows. This means it
+stacks the objects vertically, creating a new object with the combined
+rows.</p>
+<pre class="r"><code>### Adding Row: `rbind()` function
+star_wars_vector &lt;- c(461.0, 314.4, 290.5, 247.9, 309.3, 165.8)
+region &lt;- c(&quot;US&quot;, &quot;non-US&quot;)
+titles &lt;- c(&quot;A New Hope&quot;, &quot;The Empire Strike Back&quot;, &quot;Return of the Jedi&quot;)
+
+star_wars_matrix &lt;- matrix(star_wars_vector,
+                           nrow = 3, byrow = TRUE,
+                           dimnames = list(titles, region))
+print(star_wars_matrix)</code></pre>
+<pre><code>##                           US non-US
+## A New Hope             461.0  314.4
+## The Empire Strike Back 290.5  247.9
+## Return of the Jedi     309.3  165.8</code></pre>
+<pre class="r"><code>star_wars_vector2 &lt;- c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5)
+titles2 &lt;- c(&quot;The Phantom Menace&quot;, &quot;Attack of the Clones&quot;, &quot;Revenge of the Sith&quot;)
+
+star_wars_matrix2 &lt;- matrix(star_wars_vector2,
+                            nrow = 3, byrow = TRUE,
+                            dimnames = list(titles2, region))
+print(star_wars_matrix2)</code></pre>
+<pre><code>##                         US non-US
+## The Phantom Menace   474.5  552.5
+## Attack of the Clones 310.7  338.7
+## Revenge of the Sith  380.3  468.5</code></pre>
+<pre class="r"><code># Combine both Star Wars trilogies in one matrix
+all_wars_matrix &lt;- rbind(star_wars_matrix, star_wars_matrix2)
+# Print all_wars_matrix
+print(all_wars_matrix)</code></pre>
+<pre><code>##                           US non-US
+## A New Hope             461.0  314.4
+## The Empire Strike Back 290.5  247.9
+## Return of the Jedi     309.3  165.8
+## The Phantom Menace     474.5  552.5
+## Attack of the Clones   310.7  338.7
+## Revenge of the Sith    380.3  468.5</code></pre>
+<hr />
+</div>
+<div id="selection-of-matrix-elements" class="section level3">
+<h3>Selection of matrix elements</h3>
+<p>In R, the <code>matrix[]</code> syntax is a powerful tool for
+accessing and manipulating specific elements, rows, or columns within a
+matrix. <br></p>
+<p><code>matrix[row_index, column_index]</code></p>
+<hr />
+<div id="subsetting-a-row" class="section level4">
+<h4>Subsetting a Row</h4>
+<p><code>my_matrix[row_index, ]</code></p>
+<hr />
+</div>
+<div id="subsetting-a-column" class="section level4">
+<h4>Subsetting a Column</h4>
+<p><code>my_matrix[, column_index]</code></p>
+<pre class="r"><code># all_wars_matrix is available in your workspace
+all_wars_matrix</code></pre>
+<pre><code>##                           US non-US
+## A New Hope             461.0  314.4
+## The Empire Strike Back 290.5  247.9
+## Return of the Jedi     309.3  165.8
+## The Phantom Menace     474.5  552.5
+## Attack of the Clones   310.7  338.7
+## Revenge of the Sith    380.3  468.5</code></pre>
+<pre class="r"><code># Select the non-US revenue for all movies
+non_us_all &lt;- all_wars_matrix[,2]
+  
+# Average non-US revenue
+mean(non_us_all)</code></pre>
+<pre><code>## [1] 347.9667</code></pre>
+<pre class="r"><code># Select the non-US revenue for first two movies
+non_us_some &lt;- all_wars_matrix[1:2, 2]
+  
+# Average non-US revenue for first two movies
+mean(non_us_some)</code></pre>
+<pre><code>## [1] 281.15</code></pre>
+<hr />
+</div>
+</div>
+<div id="algorithm-on-matrix" class="section level3">
+<h3>Algorithm on matrix</h3>
+<pre class="r"><code># all_wars_matrix is available in your workspace
+all_wars_matrix</code></pre>
+<pre><code>##                           US non-US
+## A New Hope             461.0  314.4
+## The Empire Strike Back 290.5  247.9
+## Return of the Jedi     309.3  165.8
+## The Phantom Menace     474.5  552.5
+## Attack of the Clones   310.7  338.7
+## Revenge of the Sith    380.3  468.5</code></pre>
+<pre class="r"><code># Estimate the visitors
+visitors &lt;- all_wars_matrix / 5
+  
+# Print the estimate to the console
+visitors</code></pre>
+<pre><code>##                           US non-US
+## A New Hope             92.20  62.88
+## The Empire Strike Back 58.10  49.58
+## Return of the Jedi     61.86  33.16
+## The Phantom Menace     94.90 110.50
+## Attack of the Clones   62.14  67.74
+## Revenge of the Sith    76.06  93.70</code></pre>
+<hr />
+</div>
+<div id="arithmetic-with-matrices" class="section level3">
+<h3>Arithmetic with matrices</h3>
+<pre class="r"><code>ticket_price &lt;- c(5.0, 5.0, 6.0, 6.0, 7.0, 7.0, 4.0, 4.0, 4.5, 4.5, 4.9, 4.9)
+star_wars_title &lt;- c(&quot;A New Hope&quot;, &quot;The Empire Strikes Back&quot;, &quot;Return of the Jedi&quot;,
+                     &quot;The Phantom Menace&quot;, &quot;Attack of the Clones&quot;, &quot;Revenge of the Sith&quot;)
+region &lt;- c(&quot;US&quot;, &quot;non-US&quot;)
+
+ticket_prices_matrix &lt;- 
+
+ticket_prices_matrix &lt;- matrix(ticket_price, nrow = 6, byrow = TRUE,
+                               dimnames = list(star_wars_title, region))
+
+                               
+# all_wars_matrix and ticket_prices_matrix are available in your workspace
+all_wars_matrix</code></pre>
+<pre><code>##                           US non-US
+## A New Hope             461.0  314.4
+## The Empire Strike Back 290.5  247.9
+## Return of the Jedi     309.3  165.8
+## The Phantom Menace     474.5  552.5
+## Attack of the Clones   310.7  338.7
+## Revenge of the Sith    380.3  468.5</code></pre>
+<pre class="r"><code>ticket_prices_matrix</code></pre>
+<pre><code>##                          US non-US
+## A New Hope              5.0    5.0
+## The Empire Strikes Back 6.0    6.0
+## Return of the Jedi      7.0    7.0
+## The Phantom Menace      4.0    4.0
+## Attack of the Clones    4.5    4.5
+## Revenge of the Sith     4.9    4.9</code></pre>
+<pre class="r"><code># Estimated number of visitors
+visitors &lt;- all_wars_matrix / ticket_prices_matrix
+
+# US visitors
+us_visitors &lt;- visitors[,1]
+
+# Average number of US visitors
+mean(us_visitors)</code></pre>
+<pre><code>## [1] 75.01401</code></pre>
 </div>
 
 

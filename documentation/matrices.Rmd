@@ -14,13 +14,10 @@ output:
     
 ---
 
----
-
 ### What is matrix?
 In R, the matrix() function is a versatile tool for creating matrices.<br>
 A matrix is a rectangular array of numbers, symbols, or expressions, arranged in rows and columns.
 
----
 ```{r}
 #matrix(data, nrow, ncol, byrow = FALSE, dimnames = NULL)
 ```
@@ -50,17 +47,11 @@ Box office movies of Star Wars named new_hope, empire_strikes and return_jedi
 new_hope <- c(460.998, 314.4)
 empire_strikes <- c(290.475, 247.900)
 return_jedi <- c(309.306, 165.8)
-```
-Combine the 3 vector into one vector named as box_office
 
-```{r}
 # Create box_office
 box_office <- c(new_hope, empire_strikes, return_jedi)
 print(box_office)
-```
 
-Create a matrix
-```{r}
 # Construct star_wars_matrix
 star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE)
 print(star_wars_matrix)
@@ -69,6 +60,24 @@ print(star_wars_matrix)
 ---
 
 ### Naming a matrix
+The `colnames()` function in R is a versitile tool used to: <br>
+
+1. *Retrieve Column Names*: <br>
+•  Returns a character vector containing the names of the columns in a data frame or matrix.
+
+2. *Set Column Names*:<br>
+•  Assigns new names to the columns of a data frame or matrix.<br>
+The new names must be provided as a character vector of the same length as the number of columns.
+
+The `rownames()` function in R is used to: <br>
+
+1. *Retrieve Row Names*:<br>
+•  Returns a character vector containing the names of the rows in a data frame or matrix.<br>
+
+2. *Set Row Names*:<br>
+•  Assigns new names to the rows of a data frame or matrix.<br>
+The new names must be provided as a character vector of the same length as the number of rows.
+
 ```{r}
 # Box office Star Wars (in millions!)
 new_hope <- c(460.998, 314.4)
@@ -82,41 +91,22 @@ print(star_wars_matrix)
 # Vectors region and titles, used for naming
 region <- c("US", "non-US")
 titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
-```
-The `colnames()` function in R is a versitile tool used to: <br>
 
-1. *Retrieve Column Names*: <br>
-•  Returns a character vector containing the names of the columns in a data frame or matrix.
-
-2. *Set Column Names*:<br>
-•  Assigns new names to the columns of a data frame or matrix.<br>
-The new names must be provided as a character vector of the same length as the number of columns.
-```{r}
 # Name the columns with region
 colnames(star_wars_matrix) <- region
-```
-The `rownames()` function in R is used to: <br>
 
-1. *Retrieve Row Names*:<br>
-•  Returns a character vector containing the names of the rows in a data frame or matrix.<br>
-
-2. *Set Row Names*:<br>
-•  Assigns new names to the rows of a data frame or matrix.<br>
-The new names must be provided as a character vector of the same length as the number of rows.
-
-```{r}
 # Name the rows with titles
 rownames(star_wars_matrix) <- titles
 
 # Print out star_wars_matrix
-star_wars_matrix
+print(star_wars_matrix)
 ```
 
----
+--- 
 
-### Calculate: `rowSums()` function
+### Calculate: `rowSums()`
 The `rowSums()` function in R is used to calculate the sum of values across each row of a matrix or data frame.
-```{r}
+```{r rowSums}
 # Construct star_wars_matrix
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 region <- c("US", "non-US")
@@ -137,4 +127,162 @@ worldwide_vector <- rowSums(star_wars_matrix)
 
 # Print the rowSums() result
 worldwide_vector
+```
+
+---
+
+### Adding Column: `cbind()`
+The `cbind()` function in R is a versatile tool used to combine multiple objects (vectors, matrices, or data frames) by columns.<br>
+This means it stacks the objects horizontally, creating a new object with the combined columns.
+```{r cbind}
+# Construct star_wars_matrix
+box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+region <- c("US", "non-US")
+titles <- c("A New Hope", 
+            "The Empire Strikes Back", 
+            "Return of the Jedi")
+               
+star_wars_matrix <- matrix(box_office, 
+                      nrow = 3, byrow = TRUE,
+                      dimnames = list(titles, region))
+
+# The worldwide box office figures
+worldwide_vector <- rowSums(star_wars_matrix)
+# Print worldwide_vector rowSums
+print(worldwide_vector)
+
+# Bind the new variable worldwide_vector as a column to star_wars_matrix
+all_wars_matrix <- cbind(star_wars_matrix, worldwide_vector)
+# Print result of cbind() of start_wars_matrix and worldwide_vector
+print(all_wars_matrix)
+```
+
+---
+
+### Calculate: `colSums()`
+`colSums()` in R: Summing Up Columns <br>
+
+The `colSums()` function in R is a handy tool to calculate the sum of values within each column of a matrix or data frame. 
+
+```{r all_wars_matrix}
+# all_wars_matrix is available in your workspace
+print(all_wars_matrix)
+
+# Total revenue for US and non-US
+total_revenue_vector <- colSums(all_wars_matrix)
+  
+# Print out total_revenue_vector
+print(total_revenue_vector)
+```
+
+---
+
+
+### Adding Row `rbind()`
+
+The `rbind()` function in R is used to combine multiple objects (vectors, matrices, or data frames) by rows. This means it stacks the objects vertically, creating a new object with the combined rows.
+```{r rbind}
+### Adding Row: `rbind()` function
+star_wars_vector <- c(461.0, 314.4, 290.5, 247.9, 309.3, 165.8)
+region <- c("US", "non-US")
+titles <- c("A New Hope", "The Empire Strike Back", "Return of the Jedi")
+
+star_wars_matrix <- matrix(star_wars_vector,
+                           nrow = 3, byrow = TRUE,
+                           dimnames = list(titles, region))
+print(star_wars_matrix)
+
+star_wars_vector2 <- c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5)
+titles2 <- c("The Phantom Menace", "Attack of the Clones", "Revenge of the Sith")
+
+star_wars_matrix2 <- matrix(star_wars_vector2,
+                            nrow = 3, byrow = TRUE,
+                            dimnames = list(titles2, region))
+print(star_wars_matrix2)
+
+# Combine both Star Wars trilogies in one matrix
+all_wars_matrix <- rbind(star_wars_matrix, star_wars_matrix2)
+# Print all_wars_matrix
+print(all_wars_matrix)
+```
+
+---
+
+### Selection of matrix elements
+In R, the `matrix[]` syntax is a powerful tool for accessing and manipulating specific elements, rows, or columns within a matrix. <br>
+
+`matrix[row_index, column_index]`
+
+---
+
+#### Subsetting a Row
+`my_matrix[row_index, ]`
+
+---
+
+#### Subsetting a Column
+`my_matrix[, column_index]`
+
+
+
+```{r selection-matrix-elements}
+# all_wars_matrix is available in your workspace
+all_wars_matrix
+
+# Select the non-US revenue for all movies
+non_us_all <- all_wars_matrix[,2]
+  
+# Average non-US revenue
+mean(non_us_all)
+  
+# Select the non-US revenue for first two movies
+non_us_some <- all_wars_matrix[1:2, 2]
+  
+# Average non-US revenue for first two movies
+mean(non_us_some)
+```
+
+---
+
+### Algorithm on matrix
+```{r}
+# all_wars_matrix is available in your workspace
+all_wars_matrix
+
+# Estimate the visitors
+visitors <- all_wars_matrix / 5
+  
+# Print the estimate to the console
+visitors
+```
+
+---
+
+### Arithmetic with matrices
+```{r}
+
+ticket_price <- c(5.0, 5.0, 6.0, 6.0, 7.0, 7.0, 4.0, 4.0, 4.5, 4.5, 4.9, 4.9)
+star_wars_title <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi",
+                     "The Phantom Menace", "Attack of the Clones", "Revenge of the Sith")
+region <- c("US", "non-US")
+
+ticket_prices_matrix <- 
+
+ticket_prices_matrix <- matrix(ticket_price, nrow = 6, byrow = TRUE,
+                               dimnames = list(star_wars_title, region))
+
+                               
+# all_wars_matrix and ticket_prices_matrix are available in your workspace
+all_wars_matrix
+ticket_prices_matrix
+
+# Estimated number of visitors
+visitors <- all_wars_matrix / ticket_prices_matrix
+
+# US visitors
+us_visitors <- visitors[,1]
+
+# Average number of US visitors
+mean(us_visitors)
+
 ```
